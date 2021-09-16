@@ -1,0 +1,120 @@
+<!-- slider -->
+<div class="slider{{class}}{{#if card}} uk-card uk-card-default uk-card-body{{/if}}" uk-margin>
+  {{#if container}}
+  <div class="tw-m-auto l:tw-px-8 uk-width-2-3@xl">
+    <!-- container -->
+    <div class="container_responsive@s uk-container">
+      {{#if h2headingLine}}
+      <h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-book"></i>{{title}}</h2>
+      {{else}}
+      <!-- categray title -->
+      <div class="{{h2color}}{{#if h2fullBG}}bg_primary {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}m:justify-between uk-flex uk-flex-wrap uk-flex-middle">
+        <h2 class="{{#if h2bg}}bg_primary tw-px-2 {{/if}}s:tw-flex-1 tw-m-0 tw-py-2 tw-text-xl tw-font-medium">{{#if h2icon}}<i class="{{#if iconSecondary}}color_secondary {{else}}color_primary {{/if}}{{#if iconBg}}{{#if iconBgSecondary}}bg_secondary {{else}}bg_primary {{/if}}tw-p-1 tw-mr-2 {{/if}}tw-mr-1 {{h2iconName}}"></i>{{/if}}{{title}}</h2>
+        {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+        {{#if h2tabLinks}}
+        <span>
+          <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks1}}</a>
+          <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks2}}</a>
+          {{#if h2tabLinks3}}
+          <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks3name}}</a>
+          {{/if}}
+          {{#if h2tabLinks4}}
+          <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks4name}}</a>
+          {{/if}}
+        </span>
+        {{/if}}
+        {{#if h2links}}
+        <span>
+          <small class="pseudo:line_v">
+            <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links1}}</a>
+          </small>
+          <small class="pseudo:line_v">
+            <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links2}}</a>
+          </small>
+          {{#if h2Links3}}
+          <small class="pseudo:line_v">
+            <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links3name}}</a>
+          </small>
+          {{/if}}
+          {{#if h2Links4}}
+          <small class="pseudo:line_v">
+            <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links4name}}</a>
+          </small>
+          {{/if}}
+        </span>
+        {{/if}}
+      </div>
+      <!-- categray title -->
+      {{/if}}
+      <!-- categray content -->
+      {{#if horizontalTxt}}
+      {{> sliderBooks horizontalTxt=true caption=true truncate=false deltail=true navDefault=false}}
+      {{else}}
+      {{> sliderBooks horizontalTxt=false caption=true truncate=true deltail=false navDefault=false}}
+      {{/if}}
+      <!-- /categray content -->
+    </div>
+    <!-- /container -->
+  </div>
+  {{else}}
+  {{#if h2headingLine}}
+  <h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-book"></i>{{title}}</h2>
+  {{else}}
+  <!-- categray title -->
+  <div class="{{h2color}}{{#if h2fullBG}}bg_primary {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}m:justify-between uk-flex uk-flex-wrap uk-flex-middle">
+    <h2 class="{{#if h2bg}}bg_primary tw-px-2 {{/if}}s:tw-flex-1 tw-m-0 tw-py-2 tw-text-xl tw-font-medium">{{#if h2icon}}<i class="{{#if iconSecondary}}color_secondary {{else}}color_primary {{/if}}{{#if iconBg}}{{#if iconBgSecondary}}bg_secondary {{else}}bg_primary {{/if}}tw-p-1 tw-mr-2 {{/if}}tw-mr-1 {{h2iconName}}"></i>{{/if}}{{title}}</h2>
+    {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+    {{#if h2tabLinks}}
+    <span>
+      <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks1}}</a>
+      <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks2}}</a>
+      {{#if h2tabLinks3}}
+      <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks3name}}</a>
+      {{/if}}
+      {{#if h2tabLinks4}}
+      <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks4name}}</a>
+      {{/if}}
+    </span>
+    {{/if}}
+    {{#if h2links}}
+    <span>
+      <small class="pseudo:line_v">
+        <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links1}}</a>
+      </small>
+      <small class="pseudo:line_v">
+        <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links2}}</a>
+      </small>
+      {{#if h2Links3}}
+      <small class="pseudo:line_v">
+        <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links3name}}</a>
+      </small>
+      {{/if}}
+      {{#if h2Links4}}
+      <small class="pseudo:line_v">
+        <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links4name}}</a>
+      </small>
+      {{/if}}
+    </span>
+    {{/if}}
+  </div>
+  <!-- /categray title -->
+  {{/if}}
+  {{#if links}}
+  <!-- links -->
+  <div class="tw-mb-2 tw-px-2 s:tw-p-0 s:tw-justify-end tw-flex-wrap uk-flex uk-flex-middle">
+    <span class="pseudo:line_v"><a{{#if linksPrimary}} class="color_primary" {{/if}} href="#">{{links1}}</a></span>
+    <span class="pseudo:line_v"><a{{#if linksPrimary}} class="color_primary" {{/if}} href="#">{{links2}}</a></span>
+    <span class="pseudo:line_v"><a{{#if linksPrimary}} class="color_primary" {{/if}} href="#">{{links3}}</a></span>
+  </div>
+  <!-- /links -->
+  {{/if}}
+  <!-- categray content -->
+  {{#if horizontalTxt}}
+  {{> sliderBooks horizontalTxt=true textAlign='' caption=true truncate=false deltail=true navDefault=false}}
+  {{else}}
+  {{> sliderBooks horizontalTxt=false textAlign='tw-text-center ' caption=true truncate=true deltail=false navDefault=false}}
+  {{/if}}
+  <!-- /categray content -->
+  {{/if}}
+</div>
+<!-- /slider -->

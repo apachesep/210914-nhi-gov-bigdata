@@ -1,0 +1,47 @@
+{{!-- {{>tabSwitcher tabBtn=true secondary=true tabNoline=false borderStyle='border_dotted-before ' switcher=true switcherID='searchBox' contentMinHeight=false minHeight='min_height-175' tab1name='簡易查詢' tab2name='進階查詢' tab3=false tab3name='PubMed' tab4=false tab4name='站內檢索' moreClass='' card=true noShadow=false content='tabSwitcherContent'}} --}}
+<!-- Tab Switcher -->
+<div class="tabSwitcher">
+	<ul class="{{#if tabBtn}}tab_btn {{#if secondary}}tab_btn-secondary {{/if}}{{#if tabNoline}}tab_btn-noline {{/if}}tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0 {{else}}border2 {{#if secondary}}border_secondary {{else}}border_primary before:tw-border {{/if}}{{borderStyle}}{{/if}}uk-tab" uk-tab{{#if switcher}}="connect: #{{switcherID}}"{{/if}}>
+		<li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab1name}}</a></li>
+		<li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab2name}}</a></li>
+		{{#if tab3}}<li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab3name}}</a></li>{{/if}}
+		{{#if tab4}}<li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab4name}}</a></li>{{/if}}
+	</ul>
+	<div class="{{moreClass}}{{#if card}}{{#if noShadow}}tw-shadow-none {{/if}}uk-card uk-card-default {{else}}tw-p-0 tw-space-y-4 {{/if}}uk-card-body">
+		{{#if switcher}}
+		<ul id="{{switcherID}}" class="uk-switcher">
+			<li{{#if contentMinHeight}} class="{{minHeight}}"{{/if}}>
+				{{> (lookup . 'content') }}
+			</li>
+			<li{{#if contentMinHeight}} class="{{minHeight}}"{{/if}}>
+				{{#if contentBlank}}
+				{{>blank contentText='Tab2 Content'}}
+				{{else}}
+				{{> (lookup . 'content2') }}
+				{{/if}}
+			</li>
+			{{#if tab3}}
+			<li{{#if contentMinHeight}} class="{{minHeight}}"{{/if}}>
+				{{#if contentBlank}}
+				{{>blank contentText='Tab3 Content'}}
+				{{else}}
+				{{> (lookup . 'content3') }}
+				{{/if}}
+			</li>
+			{{/if}}
+			{{#if tab4}}
+			<li{{#if contentMinHeight}} class="{{minHeight}}"{{/if}}>
+				{{#if contentBlank}}
+				{{>blank contentText='Tab4 Content'}}
+				{{else}}
+				{{> (lookup . 'content4') }}
+				{{/if}}
+			</li>
+			{{/if}}
+		</ul>
+		{{else}}
+		{{> (lookup . 'content') }}
+		{{/if}}
+	</div>
+</div>
+<!-- /Tab Switcher -->

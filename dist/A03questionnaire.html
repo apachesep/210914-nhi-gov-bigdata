@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="text-m" lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
+		<title>健保署</title>
+		<!-- favicon -->
+		<link rel="shortcut icon" type="image/svg" href="img/favicon.svg" />
+		<!-- /favicon -->
+		<link rel="stylesheet" href="css/uikit.min.css">
+		<link rel="stylesheet" href="css/tailwind.min.css">
+		<link rel="stylesheet" href="css/fontawesome.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/colors.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+		<script src="js/uikit.min.js"></script>
+		<script src="js/uikit-icons.min.js"></script>
+		<script src="js/chart.min.js"></script>
+		<script src="js/script.min.js" defer></script>
+	</head>
+
+	<body id="top" class="page tw-relative">
+		<span class="tw-hidden">Some images has been designed using resources from <a href="https://unsplash.com/">Unsplash</a> &amp; <a href="https://pixabay.com/">Pixabay</a> &amp; <a href="https://www.freepik.com/">Freepik</a></span>
+		<!-- header -->
+		<header>
+			<div class="uk-sticky" uk-sticky="media: (max-width: 959px); cls-active: tw-shadow-md">
+				<nav class="tw-w-full tw-z-10">
+					<!-- logo & sideLinks -->
+					<div class="logoBG s:tw-py-1 m:tw-py-2 tw-relative">
+						<!-- color background -->
+						<div class="tw-bg-white tw-opacity-50 uk-position-cover"></div>
+						<!-- color background -->
+						<!-- container -->
+						<div class="tw-text-white tw-relative uk-container">
+							<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+								<!-- logo -->
+								<div class="logo">
+									<h1 class="tw-m-0 tw-text-base">
+										<a class="logoimg tw-no-underline uk-flex uk-flex-middle" href="Aindex.html" title="健保署">
+											<span class="tw-sr-only">健保署</span>
+											<img class="uk-preserve" data-src="img/logoA.svg" data-width data-height alt="健保署" uk-img uk-svg>
+										</a>
+									</h1>
+								</div>
+								<!-- /logo -->
+								<!-- sideLinks -->
+								<div class="tw-m-0 tw-relative uk-width-auto">
+									<div class="sub_nav uk-flex uk-flex-middle">
+										<span><a class="tw-px-2" href="index.html" title="回首頁"><i class="fas fa-home"></i><span class="tw-sr-only">回首頁</span></a></span>
+										<span><a class="tw-px-2" href="" title="登出"><i class="fas fa-sign-out-alt"></i><span class="tw-sr-only">登出</span></a></span>
+									</div>
+								</div>
+								<!-- /sideLinks -->
+							</div>
+						</div>
+						<!-- /container -->
+					</div>
+					<!-- /logo & sideLinks -->
+				</nav>
+			</div>
+		</header>
+		<!-- /header -->
+		<!-- main content -->
+		<section id="content" class="tw-px-0 tw-space-y-2 m:tw-space-y-4 tw-relative" uk-height-viewport="expand: true">
+		  <p class="name tw-text-xl tw-font-semibold tw-m-0 uk-text-center"><i class="tw-mr-2 fas fa-user-circle" alt=''></i>張大明</p>
+		  <!-- container -->
+		  <div class="tw-space-y-4 tw-relative uk-container">
+		    <!-- inr -->
+		    <div class="inr">
+		      <!-- categray title -->
+		      <div class="bg_primary tw-px-2 tw-py-1 uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+		        <h2 class="tw-px-1 tw-m-0 tw-text-base tw-font-medium">INR 檢測</h2>
+		      </div>
+		      <!-- /categray title -->
+		      
+		      <!-- categray content -->
+		      <div class="tw-p-3 tw-shadow hover:tw-shadow-xl uk-card uk-card-default">
+		        <div class="min_height-70@s">
+		          <div class="uk-text-center uk-grid uk-grid-column-large uk-grid-row-small uk-flex-column" uk-grid>
+		            <p class="number color_primary tw-m-0 tw-text-3xl tw-font-black">1.1</p>
+		            <time>2021/9/6 19:05</time>
+		          </div>
+		        </div>
+		      </div>
+		      <!-- /categray content -->
+		    </div>
+		    <!-- /inr -->
+		    <form>
+		      <ol class="tw-space-y-2">
+		        <li>
+		          <span class="tw-font-medium tw-inline-block tw-w-full">請問量測的INR數據是否正確？</span>
+		          <div class="uk-grid uk-grid-small uk-child-width-auto">
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r1" checked>是</label>
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r1">否</label>
+		          </div>
+		        </li>
+		        <li>
+		          <label class="tw-font-medium tw-inline-block tw-w-full" for="f-input">你昨天服用了多少劑warfarin？</label>
+		          <div class="tw-space-x-1 uk-flex-middle uk-grid uk-grid-collapse uk-child-width-auto">
+		            <div><input id="f-input" class="tw-mr-1 uk-input uk-form-width-small" type="text" placeholder=""></div>
+		            <div>mg</div>
+		          </div>
+		        </li>
+		        <li>
+		          <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有更改任何藥物？</span>
+		          <div class="uk-grid uk-grid-small uk-child-width-auto">
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r3" checked>是</label>
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r3">否</label>
+		          </div>
+		        </li>
+		        <li>
+		          <span class="tw-font-medium tw-inline-block tw-w-full">是否有出血症狀？</span>
+		          <div class="uk-grid uk-grid-small uk-child-width-auto">
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r4" checked>是</label>
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r4">否</label>
+		          </div>
+		        </li>
+		        <li>
+		          <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中有忘記服藥嗎？</span>
+		          <div class="uk-grid uk-grid-small uk-child-width-auto">
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r5" checked>是</label>
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r5">否</label>
+		          </div>
+		        </li>
+		        <li>
+		          <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有吃綠色蔬菜？</span>
+		          <div class="uk-grid uk-grid-small uk-child-width-auto">
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r6" checked>是</label>
+		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r6">否</label>
+		          </div>
+		        </li>
+		      </ol>
+		    </form>
+		  </div>
+		  <!-- /container -->
+		</section>
+		<!-- /main content -->
+
+		<!-- footer -->
+		<footer class="tw-relative tw-mt-4 m:tw-mt-8">
+			<div class="tw-p-4 l:tw-px-8 m:tw-py-6 tw-m-auto uk-width-2-3@xl">
+				<!-- relative -->
+				<div class="tw-relative">
+					<p class="tw-m-0 uk-text-center">Copyright © 2021衛生福利部中央健康保險署<span class="tw-block s:tw-inline s:tw-pl-2">版權所有</span></p>
+				</div>
+				<!-- /relative -->
+			</div>
+		</footer>
+		<!-- /footer -->
+		<a id="gototop" class="hover:color_white tw-text-white tw-bg-black tw-bg-opacity-50 hover:tw-bg-opacity-70 tw-opacity-0 tw-no-underline tw-p-2 tw-px-3 tw-rounded tw-text-center tw-fixed tw-bottom-0 tw-right-0 tw-mr-3 tw-mb-3" href="javascript:void(0)" title="回到最上"><i class="fas fa-angle-up"></i><span class="tw-sr-only">回到最上</span></a>
+
+	</body>
+</html>

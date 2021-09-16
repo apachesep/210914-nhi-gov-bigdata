@@ -1,0 +1,358 @@
+{{!-- {{>offcanvas titleIsLink=true navMenuJS=true subAccordion=true level4=true}} --}}
+
+<!-- uk-offcanvas -->
+{{#if titleIsLink}}
+{{#if navMenuJS}}
+<div id="offcanvas" uk-offcanvas>
+	<div class="bg_primary tw-py-5 uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+		<ul class="tw-pt-6 uk-nav uk-nav-default">
+			<li class="tw-py-1">
+				<a class="tw-p-0" href="#"><span class="tw-text-white">Level1</span></a>
+			</li>
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level2</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level3</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1 uk-parent">
+						<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{#if level4}}
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level4</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1 uk-parent">
+						<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1 uk-parent">
+								<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+								<ul class="tw-py-0 uk-nav uk-nav-sub">
+									<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									</li>
+									<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
+			<li class="uk-nav-divider"></li>
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">English</a></li>
+		</ul>
+	</div>
+</div>
+{{else}}
+{{#if subAccordion}}
+{{!-- every sub menu is collapsible --}}
+<div id="offcanvas" uk-offcanvas>
+	<div class="bg_primary tw-py-5 uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+		<ul class="tw-pt-6 uk-nav uk-nav-default">
+			<li class="tw-py-1">
+				<a class="tw-p-0" href="#"><span class="tw-text-white">Level1</span></a>
+			</li>
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level2</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level3</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1 uk-parent">
+						<div class="tw-flex tw-justify-between">
+							<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Item</span></a>
+							<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+						</div>
+						<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{#if level4}}
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level4</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1 uk-parent">
+						<div class="tw-flex tw-justify-between">
+							<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Item</span></a>
+							<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+						</div>
+						<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1 uk-parent">
+								<div class="tw-flex tw-justify-between">
+									<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Item</span></a>
+									<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+								</div>
+								<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+									<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									</li>
+									<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
+			<li class="uk-nav-divider"></li>
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">English</a></li>
+		</ul>
+	</div>
+</div>
+{{else}}
+{{!-- only the 1st sub menu is collapsible, sub of sub menu not collapsible --}}
+<div id="offcanvas" uk-offcanvas>
+	<div class="bg_primary tw-py-5 uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+		<ul class="tw-pt-6 uk-nav uk-nav-default">
+			<li class="tw-py-1">
+				<a class="tw-p-0" href="#"><span class="tw-text-white">Level1</span></a>
+			</li>
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level2</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level3</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1 uk-parent">
+						<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{#if level4}}
+			<li class="tw-py-1 uk-parent">
+				<div class="tw-flex tw-justify-between">
+					<a class="tw-flex tw-flex-1 tw-items-center" href="#"><span class="tw-text-white">Level4</span></a>
+					<a class="min_width-50 tw-flex tw-flex-none tw-items-start tw-justify-end tw-pt-px" href="javascript:void(0)"><span class="toggle" uk-icon="icon: chevron-right" title="展開選單"><small class="tw-sr-only">展開選單</small></span><span class="toggle tw-hidden" uk-icon="icon: chevron-down" title="收合選單"><small class="tw-sr-only">收合選單</small></span></a>
+				</div>
+				<ul class="toggle tw-hidden tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+					<li class="tw-py-1 uk-parent">
+						<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+							</li>
+							<li class="tw-py-1 uk-parent">
+								<a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+								<ul class="tw-py-0 uk-nav uk-nav-sub">
+									<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									</li>
+									<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-py-1"><a href="#"><span class="tw-text-white tw-text-tw-opacity-50">Item</span></a>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
+			<li class="uk-nav-divider"></li>
+			{{#if navIcon}}
+			<li>
+				<span><a class="min_width-50 tw-px-2" href="index.html" title="回首頁"><i class="fas fa-home"></i><span class="tw-sr-only">回首頁</span></a></span>
+				<span><a class="min_width-50 tw-px-2" href="" title="網站地圖"><i class="fas fa-map"></i><span class="tw-sr-only">網站地圖</span></a></span>
+				<span><a class="min_width-50 tw-px-2" href="" title="聯絡我們"><i class="fas fa-envelope"></i><span class="tw-sr-only">聯絡我們</span></a></span>
+				<span><a class="min_width-50 tw-px-2" href="" title="英文">EN</span></a></span>
+			</li>
+			{{else}}
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">English</a></li>
+			{{/if}}
+			{{#if search}}
+			<li class="">
+				{{>searchBox searchBoxClass=' tw-mt-3' title=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' select=false selectLabel='類型選項' selectOptionl='題名' placeholder='請輸入檢索詞' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=true optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=false checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門關鍵字：'}}
+			</li>
+			{{/if}}
+		</ul>
+	</div>
+</div>
+{{/if}}
+{{/if}}
+{{else}}
+<div id="offcanvas" uk-offcanvas>
+	<div class="bg_primary tw-py-5 uk-offcanvas-bar">
+		<button class="uk-offcanvas-close" type="button" title="關閉" uk-close></button>
+		<ul class="uk-nav uk-nav-default uk-nav-parent-icon tw-text-white" uk-nav="multiple: true">
+			<li><a href="#">Level1</a></li>
+			<li class="uk-parent">
+				<a href="#">Level2</a>
+				<ul class="tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+					<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+				</ul>
+			</li>
+			<li class="uk-parent">
+				<a href="#">Level3</a>
+				<ul class="tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-mt-0 uk-nav-header">
+						<span>Item</span>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+							<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+						</ul>
+					</li>
+					<li class="tw-mt-0 uk-nav-header">
+						<span>Item</span>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+							<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			{{#if level4}}
+			<li class="uk-parent">
+				<a href="#">Level4</a>
+				<ul class="tw-py-0 uk-nav uk-nav-sub">
+					<li class="tw-mt-0 uk-nav-header">
+						<span>Item</span>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li>
+								<a class="tw-mx-2" href="#">Item</a>
+								<ul>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="tw-mx-2" href="#">Item</a>
+								<ul>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="tw-mt-0 uk-nav-header">
+						<span>Item</span>
+						<ul class="tw-py-0 uk-nav uk-nav-sub">
+							<li>
+								<a class="tw-mx-2" href="#">Item</a>
+								<ul>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+								</ul>
+							</li>
+							<li>
+								<a class="tw-mx-2" href="#">Item</a>
+								<ul>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+									<li class="tw-inline-block"><a class="tw-mx-2" href="#">Item</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			{{/if}}
+			<li class="uk-nav-divider"></li>
+			<li><a href="index.html">首頁</a></li>
+			<li><a href="#">Item</a></li>
+			<li><a href="#">English</a></li>
+		</ul>
+	</div>
+</div>
+{{/if}}
+<!-- uk-offcanvas -->

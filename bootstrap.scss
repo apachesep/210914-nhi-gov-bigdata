@@ -1,0 +1,21 @@
+@import 'src/scss/functions', 'src/scss/variables', 'src/scss/colors-variables', 'src/scss/color', 'src/scss/mixin';
+
+// Your variable overrides
+$theme-colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+);
+
+$enable-rounded: false;
+$enable-shadows: true;
+
+// $body-bg: #000;
+// $body-color: #111;
+
+$link-color: $color-primary;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+$grid-gutter-width: 1rem;
+
+@import 'node_modules/bootstrap/scss/bootstrap';

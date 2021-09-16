@@ -1,0 +1,184 @@
+{{!-- {{>footer mask=false sitemap=false gradientLine=false textCenter=true topInfo=true online=false iconOnline='fas fa-eye' today=false iconToday='fas fa-user' sum=true iconSum='fas fa-users' infoBG=true secondaryBG=false vertical=false colorPrimary=false colorSecondary=false sitemap=false privacy=false rightCols=false}} --}}
+<!-- footer -->
+{{#if mask}}
+<div id="footeremask" class="tw-relative tw-mt-4 m:tw-mt-8">
+	<div class="bg"></div>
+</div>
+{{/if}}
+<footer class="tw-relative{{#if mask}}{{else}} tw-mt-4 m:tw-mt-8{{/if}}">
+	<div class="{{#if footerWide}}tw-p-4 m:tw-py-6{{else}}tw-p-4 l:tw-px-8 m:tw-py-6 tw-m-auto uk-width-2-3@xl{{/if}}">
+		<!-- relative -->
+		<div class="tw-relative">
+			{{#if gradientLine}}
+			<div class="tw-bg-gradient-to-r tw-from-transparent tw-via-black tw-to-transparent tw-h-px tw-mb-5"></div>
+			{{/if}}
+			{{#if hrefForAA}}
+			<!-- accesskey -->
+			<div class="tw-h-0 tw-relative uk-visible@m">
+				<a class="tw-no-underline tw-inline-block tw-px-1 uk-position-absolute" href="#B" id="AB" name="B" title="下方功能區塊" accesskey="B" style="left:-30px">:::</a>
+			</div>
+			<!-- /accesskey -->
+			{{/if}}
+			{{#if topLink}}
+			<!-- top links -->
+			<div id="toplinks" class="tw-my-1 uk-margin-bottom" uk-margin>
+				<div class="tw-mb-3 uk-child-width-1-2 uk-child-width-1-4@m" uk-grid="masonry: true">
+					<div class="tw-space-y-1">
+						<a class="header tw-tracking-widest tw-font-medium tw-mb-4 tw-px-1" href="#">{{#if topLinkIcon}}<span alt=""><i class="color_primary tw-mr-1 {{topLinkIconClass}}"></i></span>{{/if}}加入我們</a>
+					</div>
+					<div class="tw-space-y-1">
+						<a class="header tw-tracking-widest tw-font-medium tw-mb-4 tw-px-1" href="#">{{#if topLinkIcon}}<span alt=""><i class="color_primary tw-mr-1 {{topLinkIconClass}}"></i></span>{{/if}}產品導覽</a>
+					</div>
+					<div class="tw-space-y-1">
+						<a class="header tw-tracking-widest tw-font-medium tw-mb-4 tw-px-1" href="#">{{#if topLinkIcon}}<span alt=""><i class="color_primary tw-mr-1 {{topLinkIconClass}}"></i></span>{{/if}}線上客服</a>
+					</div>
+					<div class="tw-space-y-1">
+						<a class="header tw-tracking-widest tw-font-medium tw-mb-4 tw-px-1" href="#">{{#if topLinkIcon}}<span alt=""><i class="color_primary tw-mr-1 {{topLinkIconClass}}"></i></span>{{/if}}聯絡我們</a>
+					</div>
+				</div>
+			</div>
+			<!-- /top links -->
+			{{/if}}
+			{{#if sitemap}}
+			<!-- sitemap -->
+			<div id="sitemap" class="tw-my-1 uk-margin-bottom" uk-margin>
+				<div class="tw-mb-3 uk-child-width-1-2@s uk-child-width-1-4@m" uk-grid="masonry: true">
+					<div class="tw-space-y-1">
+						<p class="header tw-font-medium tw-mb-4 tw-px-1">研究資源</p>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+					</div>
+					<div class="tw-space-y-1">
+						<p class="header tw-font-medium tw-mb-4 tw-px-1">參考諮詢</p>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+					</div>
+					<div class="tw-space-y-1">
+						<p class="header tw-font-medium tw-mb-4 tw-px-1">服務項目</p>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+					</div>
+					<div class="tw-space-y-1">
+						<p class="header tw-font-medium tw-mb-4 tw-px-1">關於本館</p>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">Item</a>
+						<a class="tw-block" href="#">電升密和家提一單他以當作響響一電研言</a>
+					</div>
+				</div>
+			</div>
+			<!-- /sitemap -->
+			{{/if}}
+			{{#if border}}
+			<hr class="tw-border tw-border-dotted tw-border-1 {{#if borderWhite}}tw-border-white {{else}}tw-border-black {{/if}}tw-border-opacity-20 tw-mb-4">
+			{{/if}}
+			{{#if gradientLine}}
+			<div class="tw-bg-gradient-to-r tw-from-transparent tw-via-black tw-to-transparent tw-h-px"></div>
+			{{/if}}
+			{{#if simpleFooter}}
+			<p{{#if textCenter}} class="tw-m-0 uk-text-center"{{/if}}>Copyright © 2021衛生福利部中央健康保險署<span class="tw-block s:tw-inline s:tw-pl-2">版權所有</span></p>
+			{{else}}
+			<div id="footer" class="tw-text-sm uk-flex-top uk-grid {{#if gridDivider}}uk-grid-divider {{/if}}uk-grid-small uk-child-width-expand@m" uk-grid>
+				<div uk-margin>
+					<div class="uk-grid uk-grid-small{{#if textCenter}} uk-text-center uk-flex-center{{/if}}" uk-grid uk-margin>
+						{{#if topInfo}}
+						<div class="uk-width-1-1">
+							<div class="uk-grid uk-grid-small{{#if textCenter}} uk-text-center uk-flex-center{{/if}}" uk-grid uk-margin>
+								{{#if online}}
+								<div class="info">
+									<div class="{{#if infoBG}}{{#if secondaryBG}}bg_secondary {{else}}bg_primary {{/if}}{{#if vertical}} uk-text-center{{/if}}{{/if}}tw-px-2 tw-py-1"><i class="{{#if colorPrimary}}color_primary {{/if}}{{#if colorSecondary}}color_secondary {{/if}}{{#if vertical}}tw-block {{else}}tw-mr-1 {{/if}}{{iconOnline}}" title="在線人數"></i><span class="{{#if vertical}}tw-block{{else}}tw-mr-1{{/if}}">在線人數</span></span><span{{#if vertical}} class="tw-block"{{/if}}>123</span></div>
+								</div>
+								{{/if}}
+								{{#if today}}
+								<div class="info">
+									<div class="{{#if infoBG}}{{#if secondaryBG}}bg_secondary {{else}}bg_primary {{/if}}{{#if vertical}} uk-text-center{{/if}}{{/if}}tw-px-2 tw-py-1"><i class="{{#if colorPrimary}}color_primary {{/if}}{{#if colorSecondary}}color_secondary {{/if}}{{#if vertical}}tw-block {{else}}tw-mr-1 {{/if}}{{iconToday}}" title="今日瀏覽"></i><span class="{{#if vertical}}tw-block{{else}}tw-mr-1{{/if}}">今日瀏覽</span></span><span{{#if vertical}} class="tw-block"{{/if}}>123</span></div>
+								</div>
+								{{/if}}
+								{{#if sum}}
+								<div class="info">
+									<div class="{{#if infoBG}}{{#if secondaryBG}}bg_secondary {{else}}bg_primary {{/if}}{{#if vertical}} uk-text-center{{/if}}{{/if}}tw-px-2 tw-py-1"><i class="{{#if colorPrimary}}color_primary {{/if}}{{#if colorSecondary}}color_secondary {{/if}}{{#if vertical}}tw-block {{else}}tw-mr-1 {{/if}}{{iconSum}}" title="瀏覽人次"></i><span class="{{#if vertical}}tw-block{{else}}tw-mr-1{{/if}}">瀏覽人次</span></span><span{{#if vertical}} class="tw-block"{{/if}}>123</span></div>
+								</div>
+								{{/if}}
+								{{#if sitemap}}
+								<div class="sitemap">
+									<a class="{{#if blackBG}}bg_black {{/if}}{{#if primaryBG}}bg_primary {{/if}}{{#if secondaryBG}}bg_secondary {{/if}}min_width-90 tw-text-xs tw-text-center tw-no-underline tw-px-2 tw-py-1" href="#" uk-toggle="target: #sitemap">網站地圖</a>
+								</div>
+								{{/if}}
+								{{#if privacy}}
+								<div class="privacy">
+									<a class="min_width-90 tw-text-xs tw-text-center tw-border tw-border-black tw-border-solid tw-px-2 tw-py-1" href="#">隱私權與安全政策</a>
+								</div>
+								{{/if}}
+								{{#if hrefForAA}}
+								<!-- accesskey -->
+								<div><a class="tw-opacity-75 hover:tw-opacity-100 tw-inline-block" href="#" title="無障礙AA標章" target="_blank"><img src="img/wcag2AA.jpg" alt="無障礙AA標章" width="85"><span class="tw-sr-only">無障礙AA標章</span></a></div>
+								<!-- /accesskey -->
+								{{/if}}
+							</div>
+						</div>
+						{{/if}}
+						{{#if links}}
+						<div class="uk-margin uk-width-1-1">
+							<div class="uk-grid uk-grid-column-collapse uk-grid-row-small{{#if textCenter}} uk-text-center uk-flex-center{{/if}}" uk-grid uk-margin>
+								<span{{#if navVLine}} class="pseudo:line_v tw-inline-block"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">個資法及隱私權聲明</a></span>
+								<span{{#if navVLine}} class="pseudo:line_v tw-inline-block"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">資訊安全政策</a></span>
+								<span{{#if navVLine}} class="pseudo:line_v tw-inline-block"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">政府網站資料開放宣告</a></span>
+							</div>
+						</div>
+						{{/if}}
+						<div class="uk-width-1-1">
+							<p>Copyright © 2021衛生福利部中央健康保險署 版權所有</p>
+							{{!-- <p>三峽總院區 地址：237201新北市三峽區三樹路2號 電話：(02)7740-7890 傳真：(02)7740-1170</p>
+							<p>臺北院區 地址：106011臺北市大安區和平東路一段179號 電話：(02)7740-7890 傳真：(02)7740-7849</p>
+							<p>臺中院區 地址：420081臺中市豐原區師範街67號 電話：(02)7740-7890 傳真：(04)7740-7949</p>
+							<p>網站服務：臺北院區語文教育及編譯研究中心</p> --}}
+						</div>
+					</div>
+				</div>
+				{{#if rightCols}}
+				<div class="uk-width-auto" uk-margin>
+					<div class="uk-grid uk-grid-small{{#if textCenter}} uk-text-center uk-flex-center{{/if}}" uk-grid uk-margin>
+						{{#if online}}
+						<div class="online">
+							<div class="{{#if infoBG}}{{#if secondaryBG}}bg_secondary {{else}}bg_primary {{/if}}{{#if vertical}} uk-text-center{{/if}}{{/if}}tw-px-2 tw-py-1"><i class="{{#if colorPrimary}}color_primary {{/if}}{{#if colorSecondary}}color_secondary {{/if}}{{#if vertical}}tw-block {{else}}tw-mr-1 {{/if}}{{iconOnline}}" title="在線人數"></i><span class="{{#if vertical}}tw-block{{else}}tw-mr-1{{/if}}">在線人數</span></span><span{{#if vertical}} class="tw-block"{{/if}}>123</span></div>
+						</div>
+						{{/if}}
+						{{#if today}}
+						<div class="today">
+							<div class="{{#if infoBG}}{{#if secondaryBG}}bg_secondary {{else}}bg_primary {{/if}}{{#if vertical}} uk-text-center{{/if}}{{/if}}tw-px-2 tw-py-1"><i class="{{#if colorPrimary}}color_primary {{/if}}{{#if colorSecondary}}color_secondary {{/if}}{{#if vertical}}tw-block {{else}}tw-mr-1 {{/if}}{{iconToday}}" title="今日瀏覽"></i><span class="{{#if vertical}}tw-block{{else}}tw-mr-1{{/if}}">今日瀏覽</span></span><span{{#if vertical}} class="tw-block"{{/if}}>123</span></div>
+						</div>
+						{{/if}}
+						{{#if sum}}
+						<div class="sum">
+							<div class="{{#if infoBG}}{{#if secondaryBG}}bg_secondary {{else}}bg_primary {{/if}}{{#if vertical}} uk-text-center{{/if}}{{/if}}tw-px-2 tw-py-1"><i class="{{#if colorPrimary}}color_primary {{/if}}{{#if colorSecondary}}color_secondary {{/if}}{{#if vertical}}tw-block {{else}}tw-mr-1 {{/if}}{{iconSum}}" title="瀏覽人次"></i><span class="{{#if vertical}}tw-block{{else}}tw-mr-1{{/if}}">瀏覽人次</span></span><span{{#if vertical}} class="tw-block"{{/if}}>123</span></div>
+						</div>
+						{{/if}}
+						{{#if sitemap}}
+						<div class="sitemap">
+							<a class="{{#if blackBG}}bg_black {{/if}}{{#if primaryBG}}bg_primary {{/if}}{{#if secondaryBG}}bg_secondary {{/if}}min_width-90 tw-text-xs tw-text-center tw-no-underline tw-px-2 tw-py-1" href="#" uk-toggle="target: #sitemap">網站地圖</a>
+						</div>
+						{{/if}}
+						{{#if privacy}}
+						<div class="privacy">
+							<a class="min_width-90 tw-text-xs tw-text-center tw-border tw-border-black tw-border-solid tw-px-2 tw-py-1" href="#">隱私權與安全政策</a>
+						</div>
+						{{/if}}
+						{{#if hrefForAA}}
+						<div class="wcag2AA">
+							<a class="tw-opacity-75 hover:tw-opacity-100 tw-inline-block" href="#" title="無障礙AA標章" target="_blank"><img src="img/wcag2AA.jpg" alt="無障礙AA標章" width="85"><span class="tw-sr-only">無障礙AA標章</span></a>
+						</div>
+						{{/if}}
+					</div>
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+		</div>
+		<!-- /relative -->
+	</div>
+</footer>
+<!-- /footer -->
+{{!-- <a id="gototop" class="tw-text-white tw-bg-black tw-bg-opacity-50 hover:tw-bg-opacity-70 tw-opacity-0 tw-no-underline tw-p-2 tw-rounded tw-text-center tw-fixed tw-bottom-0 tw-right-0 tw-mr-3 tw-mb-3" href="#top" title="回到最上" uk-scroll uk-totop><span class="tw-sr-only">回到最上</span></a> --}}
+<a id="gototop" class="hover:color_white tw-text-white tw-bg-black tw-bg-opacity-50 hover:tw-bg-opacity-70 tw-opacity-0 tw-no-underline tw-p-2 tw-px-3 tw-rounded tw-text-center tw-fixed tw-bottom-0 tw-right-0 tw-mr-3 tw-mb-3" href="javascript:void(0)" title="回到最上"><i class="fas fa-angle-up"></i><span class="tw-sr-only">回到最上</span></a>

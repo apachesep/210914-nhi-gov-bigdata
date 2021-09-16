@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html class="text-m" lang="zh-Hant">
+	{{!-- First edit the title of the templateData in the gulp.task('templates') of gulpfile.js.
+	The title will be changed to {{title}} in all hbs --}}
+
+	<head>
+		{{>meta}}
+	</head>
+
+	<body id="top" class="prescription index{{#if focusForAA}} focus{{/if}} tw-relative">
+		<span class="tw-hidden">Some images has been designed using resources from <a href="https://unsplash.com/">Unsplash</a> &amp; <a href="https://pixabay.com/">Pixabay</a> &amp; <a href="https://www.freepik.com/">Freepik</a></span>
+		{{#if bootstrap}}
+		{{>header-bs shadow=true topNav=true topNavTextColor='tw-text-white hover:tw-text-opacity-75 ' textSize=true topNavTextSizeColor='tw-text-white ' rightNavTextSizeColor='' logoRightNav=true mainMenu=true 01active=false menuTitle1='Title1' menuTitle2='Title2' menuTitle3='Title3' menu04=true menuTitle4='Title4' menu05=true menuTitle5='Title5' menu06=true menuTitle6='Title6' menuTitle6IsLink=false menuTitle6link='' menu07=flse  menu08=flse borderHR=false iconLogin=true modal=false}}
+		{{else}}
+		{{>header shadow=false topNav=false stickyBgColor='' navAbsolute=false logoNavClass='' logoBgClass=' s:tw-py-1 m:tw-py-2' logoBackground=true logoBackgroundClass='tw-bg-white tw-opacity-50' indexHref='Bindex.html' logoSrc='data-src="img/logoB.svg"' logoText=false logotext='' logoTextEng=false logotexteng='' logoRightNav=true navIcon=true navVLine=false textSize=false textSizeClass='' iconSearch=false dropdownSearch=false offcanvas=false offcanvasBtnColor=' color_primary' mainMenu=false mainMenuClass='' mainMenuBg=true secondary=false title3=true title4=false title5=false title6=false title7=false menuTitle1='Tab1' menuTitle2='Tab2' menuTitle3='Tab3' menuTitle4='名詞建議' menuTitle5='審議會' menuTitle6='會員專區' menuTitle7='關於我們' banner=false}}
+		{{/if}}
+
+		{{#if bootstrap}}
+		<main>
+			{{>indexContent-bs searchBox=true}}
+		</main>
+		{{else}}
+		<main>
+			{{>mainContent name=true content='index-content-b' inrtext=true inrText='自行檢測'}}
+		</main>
+		{{/if}}
+
+		{{#if bootstrap}}
+		{{>footer-bs}}
+		{{else}}
+		{{>footer mask=false footerWide=false sitemap=false border=false gradientLine=false gridDivider=false topLink=false topLinkIcon=false topLinkIconClass='fas fa-caret-right' border=true borderWhite=false simpleFooter=true textCenter=true topInfo=false links=false navVLine=true online=false iconOnline='fas fa-eye' today=false iconToday='fas fa-user' sum=true iconSum='fas fa-users' infoBG=true secondaryBG=false vertical=false colorPrimary=false colorSecondary=false sitemap=false privacy=false rightCols=false}}
+		{{/if}}
+		{{#if jqueryBody}}
+
+		<!-- jq:js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+		<!-- bs:js -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+	</body>
+
+</html>

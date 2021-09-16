@@ -1,0 +1,114 @@
+{{>pagination simple=true checkedNumber=true orderForMobile=true pageFirstAndLast=true pageSelect=true pageText=true pageSum='2' numberInOnePage=true sortDropdown=true selectLabel='排序選單' selectOptionl='請選擇排序欄位'}}
+{{#if headingTitle}}
+<h2 class="tw-text-xl m:tw-text-2xl tw-font-medium">{{h2Heading}}</h2>
+{{/if}}
+<div class="uk-grid uk-grid-small">
+  <div class="min_width-1/2@s uk-width-expand">
+    <h2 class="tw-text-xl m:tw-text-2xl tw-font-medium tw-m-0">標題名稱</h2>
+    <p>總車強交成！活論這友食加每向初難</p>
+  </div>
+  <div class="uk-flex uk-flex-top uk-width-auto">
+    <a class="btn_primary tw-mr-2 uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-pen"></i>修訂/勘誤建議</a>
+    <img src="img/qrcode.png" alt="文字說明">
+  </div>
+</div>
+<div class="tw-pb-2">
+  <h2 class="tw-text-base m:tw-text-lg tw-m-0"><span class="color_primary">▍</span>名詞解釋</h2>
+  <p>總車強交成！活論這友食加每向初難</p>
+</div>
+{{#if tabSwitcher}}
+{{>tabSwitcher tab1name='全部' tabNoline=true tab2name='Tab2' tab3=true tab3name='Tab3' content='nwesTabContent' searchBox=true content2='blank' content3='blank'}}
+{{else}}
+{{#if searchBox}}
+{{>searchBox radioBoxBar=true inputClass='min_width-100@s min_width-3/10@m ' placeholder='conceptual' selectRight1=true selectRight1Label='選項' selectRight1Optionl='題名' secondInput=true secondInputClass='min_width-100@s min_width-3/10@m ' SIPlaceholder='請輸入檢索詞' selectRight2=true selectRight2Label='選項' selectRight2Optionl='題名' searchButtonExpand=false searchButtonExpandClass='uk-width-1-1@s uk-width-auto@l' searchButtonName='縮小查詢範圍' bottomOption=true keywordAndButtons=true colorSecondary=false keywordsTitle='檢索詞：' keyword='conceptual'}}
+{{/if}}
+<h2 class="tw-text-base m:tw-text-lg tw-font-medium"><span class="color_primary tw-mr-2">∎</span>以<span class="color_primary tw-px-1">conceptual</span>進行詞彙精確檢索結果</h2>
+<table class="uk-table uk-table-small uk-table-striped uk-table-responsive">
+  <thead>
+    <tr>
+      <th class="min_width-1/6@s tw-font-medium">出處/學術領域</th>
+      <th class="min_width-1/2@s tw-font-medium">英文辭彙</th>
+      <th class="min_width-1/3@s tw-font-medium">中文辭彙</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">出處/學術領域</span>
+        <span>學術名詞</span>
+        <span class="tw-font-medium">電力工程</span>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">英文辭彙</span>
+        <a class="color_primary! hover:tw-underline" href="">conceptual</a>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">中文辭彙</span>
+        <span>概念上的</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">出處/學術領域</span>
+        <span>學術名詞</span>
+        <span class="tw-font-medium">電力工程</span>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">英文辭彙</span>
+        <a class="color_primary! hover:tw-underline" href="">conceptual</a>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">中文辭彙</span>
+        <span>概念上的</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 class="tw-text-base m:tw-text-lg tw-font-medium"><span class="color_primary tw-mr-2">∎</span>以<span class="color_primary tw-px-1">概念上的</span>進行詞彙精確檢索結果</h2>
+<table class="uk-table uk-table-small uk-table-striped uk-table-responsive">
+  <thead>
+    <tr>
+      <th class="min_width-1/6@s tw-font-medium">出處/學術領域</th>
+      <th class="min_width-1/3@s tw-font-medium">中文辭彙</th>
+      <th class="min_width-1/2@s tw-font-medium">英文辭彙</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">出處/學術領域</span>
+        <span>學術名詞</span>
+        <span class="tw-font-medium">電力工程</span>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">中文辭彙</span>
+        <a class="color_primary! hover:tw-underline" href="">概念上的</a>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">英文辭彙</span>
+        <span>conceptual</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">出處/學術領域</span>
+        <span>學術名詞</span>
+        <span class="tw-font-medium">電力工程</span>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">中文辭彙</span>
+        <a class="color_primary! hover:tw-underline" href="">概念上的</a>
+      </td>
+      <td class="tw-space-x-2 m:tw-space-x-0 uk-text-break">
+        <span class="tw-border tw-border-gray-400 tw-px-1 tw-inline-block m:tw-hidden">英文辭彙</span>
+        <span>conceptual</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="uk-flex-middle uk-grid uk-grid-small">
+  <div class="uk-width-auto"><label for="website">引用網址：</label></div>
+  <div class="uk-width-expand"><input id="website" class="uk-input" type="text" value="網址"></div>
+</div>
+{{>pagination simple=true checkedNumber=true orderForMobile=true pageFirstAndLast=true pageSelect=true pageText=true pageSum='2' numberInOnePage=true sortDropdown=true selectLabel='排序選單' selectOptionl='請選擇排序欄位'}}
+{{/if}}

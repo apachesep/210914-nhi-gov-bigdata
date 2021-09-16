@@ -1,0 +1,9 @@
+{{!-- {{>tabBar tabBtn=true tabNoline=true secondary=false borderStyle='' switcher=false tab1name='查詢結果分類' tab2name='維基百科' tab3=false tab3name='' tab4=false tab4name=''}} --}}
+<!-- uk-tab-button -->
+<ul class="{{#if tabBtn}}tab_btn {{#if secondary}}tab_btn-secondary {{/if}}{{#if tabNoline}}tab_btn-noline {{/if}}tab_btn-active-white tab_btn-space-xs! tab_btn-space-s!@s tw-m-0 tw-border-0 {{else}}border2 {{#if secondary}}border_secondary {{else}}border_primary before:tw-border {{/if}}{{borderStyle}}{{/if}}uk-tab" uk-tab{{#if switcher}}="connect: #{{switcherID}}" {{/if}}>
+  <li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab1name}}</a></li>
+  <li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab2name}}</a></li>
+  {{#if tab3}}<li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab3name}}</a></li>{{/if}}
+  {{#if tab4}}<li class="p-0"><a class="tw-text-sm m:tw-text-base tw-px-1 s:tw-px-2" href="#">{{tab4name}}</a></li>{{/if}}
+</ul>
+<!-- /uk-tab-button -->

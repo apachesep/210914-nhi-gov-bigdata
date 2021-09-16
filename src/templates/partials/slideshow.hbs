@@ -1,0 +1,154 @@
+{{!-- {{>slideshow smallSlide=true slidenavThick=false option='autoplay: true; animation: fade; min-height: 300' img1Src='https://picsum.photos/800/500' img2Src='https://picsum.photos/802/502' img3Src='https://picsum.photos/804/504' imgCover=false caption=false dotNav=false largeDotnav=false}} --}}
+{{!-- using js to set auto height, working with CSS: #slideshow .uk-slideshow-items {min-height: auto !important;} --}}
+{{#if smallSlide}}
+<!-- small slideshow -->
+<div class="smallslide{{#if slidenavThick}} slidenav_thick{{/if}}{{#if heightFull}} tw-h-full{{/if}}" uk-slideshow="{{option}}">
+  <!-- position -->
+  <div class="{{#if heightFull}}tw-h-full {{/if}}uk-position-relative uk-visible-toggle uk-light">
+    <ul class="{{#if heightFull}}tw-h-full {{/if}}uk-slideshow-items">
+      <li class="tw-bg-black">
+        {{!-- <div class="uk-position-cover uk-flex uk-flex-center uk-flex-middle">
+          <img class="tw-w-full" data-src="https://picsum.photos/800/500" alt="{{img1Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </div> --}}
+        <a class="uk-position-cover uk-flex uk-flex-center uk-flex-middle" href="#" target="_blank">
+          <span class="tw-sr-only">圖片</span>
+          <img class="tw-w-full" data-src="{{img1Src}}" alt="{{img1Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </a>
+        {{#if caption}}
+        <div class="tw-pt-0 uk-overlay uk-overlay-primary uk-position-bottom tw-text-center">
+          <h2 class="tw-text-base tw-p-2 tw-mb-0">楊志新教授榮獲第62屆學術獎殊榮</h2>
+        </div>
+        {{/if}}
+      </li>
+      <li class="tw-bg-black">
+        <a class="uk-position-cover uk-flex uk-flex-center uk-flex-middle" href="#" target="_blank">
+          <span class="tw-sr-only">圖片</span>
+          <img class="tw-w-full" data-src="{{img2Src}}" alt="{{img2Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </a>
+        {{#if caption}}
+        <div class="tw-pt-0 uk-overlay uk-overlay-primary uk-position-bottom tw-text-center">
+          <h2 class="tw-text-base tw-p-2 tw-mb-0">影像醫學部張允中教授當選「美國倫琴放射線醫學會」榮譽會員</h2>
+        </div>
+        {{/if}}
+      </li>
+      {{#if slide3}}
+      <li class="tw-bg-black">
+        <a class="uk-position-cover uk-flex uk-flex-center uk-flex-middle" href="#" target="_blank">
+          <span class="tw-sr-only">圖片</span>
+          <img class="tw-w-full" data-src="{{img3Src}}" alt="{{img3Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </a>
+        {{#if caption}}
+        <div class="tw-pt-0 uk-overlay uk-overlay-primary uk-position-bottom tw-text-center">
+          <h2 class="tw-text-base tw-p-2 tw-mb-0">臺大醫院124週年院慶系列活動-「臺大醫院國際醫療交流回顧與展望」研討會</h2>
+        </div>
+        {{/if}}
+      </li>
+      {{/if}}
+    </ul>
+    <a class="tw-px-lg-5 uk-width-1-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" aria-label="previous" title="上一張圖"><span class="tw-sr-only">上一張圖</span></a>
+    <a class="tw-px-lg-5 uk-width-1-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" aria-label="next" title="下一張圖"><span class="tw-sr-only">下一張圖</span></a>
+    {{#if dotNav}}
+    {{#if hrefForAA}}
+    <!-- dotnav -->
+    <div class="uk-position-bottom-center uk-position-small">
+      <ul class="{{#if largeDotnav}}dotnav_large {{/if}}uk-dotnav">
+        <li uk-slideshow-item="0"><a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_blank', this, event)">Banner1</a>
+        </li>
+        <li uk-slideshow-item="1"><a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_self', this, event)">Banner2</a>
+        </li>
+        <li uk-slideshow-item="2"><a href="#" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_self', this, event)">Banner3</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /dotnav -->
+    {{else}}
+    <!-- dotnav -->
+    <div class="uk-position-bottom-center uk-position-small">
+      <ul class="uk-slideshow-nav uk-dotnav"></ul>
+    </div>
+    <!-- /dotnav -->
+    {{/if}}
+    {{/if}}
+  </div>
+  <!-- /position -->
+</div>
+<!-- /small slideshow -->
+{{else}}
+{{!-- Using uk-slideshow="ratio: false" with js viewHeightMiddle("#slideshow .uk-slideshow-items", "header", ".bg_bar") and no css to prevent height adjustment --}}
+{{!-- uk-slideshow="autoplay: true; animation: fade; min-height: 300; max-height: 500; ratio: false"> --}}
+<!-- full slideshow -->
+<div id="slideshow" class="slideshow{{#if slidenavThick}} slidenav_thick{{/if}} tw-relative uk-slideshow" uk-slideshow="{{option}}">
+  <!-- position -->
+  <div class="uk-position-relative uk-visible-toggle uk-light">
+    <ul class="uk-slideshow-items">
+      <li>
+        <a class="uk-position-cover" href="#" target="_blank">
+          <span class="tw-sr-only">圖片</span>
+          <img class="uk-cover" data-src="{{img1Src}}" alt="{{img1Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </a>
+        {{#if caption}}
+        <div class="uk-position-small uk-position-bottom-right uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l">
+          <h2 class="tw-text-sm tw-bg-black tw-bg-opacity-80 tw-text-white tw-p-2 tw-mb-5 m:tw-mb-0 tw-text-center">守護健康 醫界典範</h2>
+        </div>
+        {{/if}}
+      </li>
+      <li>
+        <a class="uk-position-cover" href="#" target="_blank">
+          <span class="tw-sr-only">圖片</span>
+          <img class="uk-cover" data-src="{{img2Src}}" alt="{{img2Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </a>
+        {{#if caption}}
+        <div class="uk-position-small uk-position-bottom-right uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l">
+          <h2 class="tw-text-sm tw-bg-black tw-bg-opacity-80 tw-text-white tw-p-2 tw-mb-5 m:tw-mb-0 tw-text-center">正直誠信 創新卓越</h2>
+        </div>
+        {{/if}}
+      </li>
+      {{#if slide3}}
+      <li>
+        <a class="uk-position-cover" href="#" target="_blank">
+          <span class="tw-sr-only">圖片</span>
+          <img class="uk-cover" data-src="{{img3Src}}" alt="{{img3Alt}}" uk-img="target: !.uk-slideshow-items" data-width data-height{{#if imgCover}} uk-cover{{/if}}>
+        </a>
+        {{#if caption}}
+        <div class="uk-position-small uk-position-bottom-right uk-width-1-3@s uk-width-1-4@m uk-width-1-5@l">
+          <h2 class="tw-text-sm tw-bg-black tw-bg-opacity-80 tw-text-white tw-p-2 tw-mb-5 m:tw-mb-0 tw-text-center">團隊合作 健康尊嚴</h2>
+        </div>
+        {{/if}}
+      </li>
+      {{/if}}
+    </ul>
+    <a class="l:tw-px-5 uk-width-1-5 uk-position-left uk-flex uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" aria-label="previous" title="上一張圖"><span class="tw-sr-only">上一張圖</span></a>
+    <a class="l:tw-px-5 uk-width-1-5 uk-position-right uk-flex uk-flex-right uk-flex-middle uk-slidenav-large uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" aria-label="next" title="下一張圖"><span class="tw-sr-only">下一張圖</span></a>
+    {{#if dotNav}}
+    {{#if hrefForAA}}
+    <!-- dotnav -->
+    <div class="uk-position-bottom-center uk-position-small">
+      <ul class="{{#if largeDotnav}}dotnav_large {{/if}}uk-dotnav">
+        <li uk-slideshow-item="0"><a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_blank', this, event)">Banner1</a>
+        </li>
+        <li uk-slideshow-item="1"><a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_self', this, event)">Banner2</a>
+        </li>
+        <li uk-slideshow-item="2"><a href="#" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', this)" onkeydown="enterOpenUrl('_self', this, event)">Banner3</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /dotnav -->
+    {{else}}
+    <!-- dotnav -->
+    <div class="uk-position-bottom-center uk-position-small">
+      <ul class="uk-slideshow-nav uk-dotnav"></ul>
+    </div>
+    <!-- /dotnav -->
+    {{/if}}
+    {{/if}}
+  </div>
+  <!-- /position -->
+  {{!-- <div id="slideshowmask" class="uk-position-bottom"><div class="bg"></div></div> --}}
+</div>
+{{#if slideshowmask}}
+<div id="slideshowmask" class="tw-relative">
+  <div class="bg"></div>
+</div>
+{{/if}}
+<!--/full slideshow -->
+{{/if}}

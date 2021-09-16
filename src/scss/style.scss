@@ -1,0 +1,273 @@
+@import 'functions', 'variables', 'colors-variables', 'color', 'mixin';
+
+body {background-color: #E2E8F0;} //light yellow
+
+// .logo {
+//   background: url("../img/logo.svg#svgView(preserveAspectRatio(xMinYMid))") left center no-repeat;
+//   //Or set the attribute [preserveAspectRatio="xMinYMid"] to the svg tag
+// }
+
+.logoBG {
+  padding: 5px 0;
+  background: white;
+}
+.logoimg {
+  >img, >img~svg {
+    max-height: 50px;
+    width     : calc(1340px/100*50); //Fix Firefox - Original aspact:1313/141, Finally times height
+    min-height: 40px;
+    @media (min-width: 480px) {
+      & {
+        min-width: 400px;
+        width    : auto;
+      }
+    }
+  }
+  >img[data-src*="img/logo"], >img[data-src="img/logo"]~svg {
+    width     : calc(660px/100*50);
+  }
+  .logoText {
+    border-left: 2px solid black;
+  }
+}
+
+// @media (min-width: 640px) {
+//   .logo>* {
+//     min-width: 350px;
+//     max-width: 450px;
+//   }  
+// }
+// @media (min-width: 960px) {
+//   .logo>* {
+//     min-width: 450px;
+//   }  
+// }
+// @media (min-width: 1200px) {
+//   .logo>* {
+//     max-width: 650px;
+//   }  
+// }
+/*---------- IE10+ ------------------------------*/
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
+
+.uk-heading-line>::after,
+.uk-heading-line>::before {
+  top          : calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted $color-primary;
+}
+
+// .uk-input, .uk-select, .uk-textarea, .uk-button-default {
+//   border-color: #d0d0d0;
+// }
+
+.icon {
+  width : 65px;
+  margin: 2px 0;
+}
+
+// em,
+// strong {
+//   color: $color-secondary
+// }
+
+header,
+header nav,
+.searchBoxBanner {
+  position: relative;
+}
+
+body::before,
+header::before,
+header::after,
+.searchBoxBanner::before {
+  content : "";
+  display : block;
+  position: absolute;
+  top     : 0;
+  left    : 0;
+  right   : 0;
+  bottom  : 0;
+}
+
+// body {
+//   background: url(../img/bannerBG.png) no-repeat center center;
+//   background-size: 100%;
+//   background-position: center top;
+//   background-color: #f5efe7;
+//   transform: scaleX(-1);
+//   opacity: .15;
+// }
+
+// @media (min-width: 960px) {
+//   header::before {
+//     background: url(../img/header.png) no-repeat center center;
+//     background-size: contain;
+//     background-position: 0 0;
+//     max-height: 244px;
+//     // opacity: .15;
+//   }
+// }
+
+// header::after {
+//   position: relative;
+// }
+// @media (min-width: 1100px) {
+//   header::after {
+//     background: url('data:image/gif;base64,R0lGODlhMgAyAJEAAP///wAAAMDAwAAAACH5BAEAAAIALAAAAAAyADIAAAIzlI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jef6zvf+DwwKh8Si8YhMKicFADs=') no-repeat center center;
+//     // BASE64 code for blank.gif
+//     background-size: contain;
+//     background-position: 0 0;
+//     padding-top: calc(100%*244/1920 - 120px);
+//     height: 100%;
+//   }
+// }
+
+// #footer {
+//   background-color: $color-primary-lighter !important;
+
+//   *:not([class*=bg_]) {
+//     color: darken(text-color($color-primary-lighter), 5%) !important;
+//   }
+// }
+
+#footer,
+footer {
+  background: none;
+}
+
+footer {
+  // background-color: adjust($color3, $alpha: -0.4);
+  background-color: #CBD5E1;
+
+  * {
+    color: $color-text-dark !important;
+    font-size: .8rem;
+  }
+
+  .sum * {
+    color: white !important;
+  }
+}
+
+#offcanvas {
+  * {
+    color: white !important;
+  }
+
+  #{$btn-primary} {
+
+    &,
+    >* {
+      color: $color-primary !important;
+    }
+  }
+}
+
+.prescription {
+  &.page footer {
+    padding-bottom: 70px;
+  }
+  .bg_secondary.uk-flex {
+      border-radius: 20px 20px 0 0;
+  }
+  a.bg_secondary, a.tw-border, .uk-button {
+    border-radius: 10px;
+  }
+}
+
+#{$heading-line}>::before,
+#{$heading-line}>::after,
+#{$uk-heading-line}>::before,
+#{$uk-heading-line}>::after {
+  top          : calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted $color-primary;
+}
+
+//------ Ion.RangeSlider ------------------------
+.irs--flat .irs-bar,
+.irs--flat .irs-single,
+.irs--flat .irs-handle>i:first-child,
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  background: $color-primary;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+  border-top-color: $color-primary;
+}
+
+//------ Ion.RangeSlider ------------------------
+
+
+//Small Slideshow
+// .smallslide .uk-overlay-primary {
+//   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 1) 100%);
+// }
+
+// .smallslide .uk-slideshow-items .uk-overlay {
+//   padding-left: 10px;
+//   padding-right: 10px;
+// }
+
+// .smallslide .uk-slideshow-items h2 {
+//   font-size: 0.8rem !important;
+//   max-width: 100%;
+//   overflow: hidden;
+//   max-height: 50px;
+//   position: relative;
+//   padding-bottom: 15px !important;
+// }
+
+// .smallslide .uk-slideshow-items h2::after {
+//   content: "";
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   width: 50px;
+//   height: 18px;
+//   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1) 65%);
+//   pointer-events: none;
+// }
+
+// .smallslide .uk-dotnav>*>* {
+//   width: 10px;
+//   height: 10px;
+// }
+
+// body>.uk-position-top-left[title="跳到主要內容"] {
+//   z-index: 2;
+// }
+
+@media (max-width: 959px) {}
+
+@media (max-width: 1119px) {}
+
+@media (min-width: 480px) {}
+
+@media (min-width: 640px) {}
+
+@media (min-width: 960px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1600px) {}
+
+/*---------- Only landscape in mobile ------------------------------*/
+@media screen and (orientation:landscape) and (max-device-width: 959px) {}
+
+/*---------- IE10+ ------------------------------*/
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
+
+/* ----------- iPhone ----------- */
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+}
+
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+}

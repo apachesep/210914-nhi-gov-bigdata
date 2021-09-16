@@ -1,0 +1,72 @@
+{{#if headingTitle}}
+<h2 class="tw-text-3xl">{{h2Heading}}</h2>
+{{/if}}
+{{#if searchBox}}
+{{>searchBox placeholder='請輸入刊名' 2ndInput=true 2ndPlaceholder='請輸入ISSN' searchButtonName='搜尋'}}
+{{/if}}
+{{#if tabSwitcher}}
+{{>tabSwitcher tab1name='Tab1' tabNoline=true tab2name='Tab2' tab3=true tab3name='Tab3' tab4=true tab4name='Tab4' content='partnersTabContent' searchBox=true content2='blank' content3='blank'}}
+{{else}}
+<div class="tw-mt-2 uk-flex uk-flex-wrap uk-flex-between">
+	<div class="min_width-100 tw-mt-1 uk-hidden@m"><label><input class="checkAll uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck', '.checkAll')"> 全選</label></div>
+	<div><small>共計<span class="color_secondary py-1">466</span>筆資料</small></div>
+	<div class="mb-2 m:m-0 uk-flex uk-flex-nowrap uk-grid-small">
+		<div class="uk-text-nowrap">
+			<button class="btn_primary tw-w-full uk-button uk-button-small uk-button-primary">加入訂閱</button>
+		</div>
+		<div class="uk-text-nowrap">
+			<button class="btn_primary tw-w-full uk-button uk-button-small uk-button-primary">取消訂閱</button>
+		</div>
+		{{!-- <div class="uk-text-nowrap">
+			<button class="btn_primary tw-w-full uk-button uk-button-small uk-button-primary">瀏覽/刪除訂閱</button>
+		</div> --}}
+	</div>
+</div>
+<table class="tw-mt-0 uk-table uk-table-small uk-table-striped uk-table-responsive">
+	<thead>
+		<tr>
+			<th class="w-20"><label><input class="checkAll uk-checkbox" type="checkbox" onchange="toggleCheckAll(this, '.listCheck', '.checkAll')"> 全選</label></th>
+			<th class="min_width-60">序號</th>
+			<th class="w-3/5 uk-text-nowrap">刊名</th>
+			<th class="uk-text-nowrap">卷期</th>
+			<th class="uk-text-nowrap">全文</th>
+			<th class="uk-text-nowrap">簡介</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="uk-visible@m"><label><input class="listCheck uk-checkbox" type="checkbox"><span class="pl-1 tw-sr-only">01</span></label></td>
+			<td><label><input class="listCheck uk-checkbox uk-hidden@m" type="checkbox"><span class="pl-1">01</span></label></td>
+			<td>
+				<a class="color_primary hover:tw-underline" href="#">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
+				</a>
+			</td>
+			<td><span class="tw-mr-2 px-2 bg_black_opacity-15 text-black text-sm uk-hidden@m">卷期</span>第74卷</td>
+			<td><span class="tw-mr-2 px-2 bg_black_opacity-15 text-black text-sm uk-hidden@m">全文</span><a class="color_primary hover:tw-underline" href="#">期刊網站</a></td>
+			<td>
+				<span class="tw-mr-2 px-2 bg_black_opacity-15 text-black text-sm uk-hidden@m">簡介</span>
+				<a class="color_primary" href="#detail" uk-toggle><i class="color_primary tw-mr-1 fas fa-info-circle fa-lg" title="詳細內容"></i><span class="tw-sr-only">詳細內容</span></a>
+			</td>
+		</tr>
+		<tr>
+			<td class="uk-visible@m"><label><input class="listCheck uk-checkbox" type="checkbox"><span class="pl-1 tw-sr-only">02</span></label></td>
+			<td><label><input class="listCheck uk-checkbox uk-hidden@m" type="checkbox"><span class="pl-1">02</span></label></td>
+			<td>
+				<a class="color_primary hover:tw-underline" href="#">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor
+				</a>
+			</td>
+			<td><span class="tw-mr-2 px-2 bg_black_opacity-15 text-black text-sm uk-hidden@m">卷期</span>第74卷</td>
+			<td><span class="tw-mr-2 px-2 bg_black_opacity-15 text-black text-sm uk-hidden@m">全文</span><a class="color_primary hover:tw-underline" href="#">期刊網站</a></td>
+			<td>
+				<span class="tw-mr-2 px-2 bg_black_opacity-15 text-black text-sm uk-hidden@m">簡介</span>
+				<a class="color_primary" href="#detail" uk-toggle><i class="color_primary tw-mr-1 fas fa-info-circle fa-lg" title="詳細內容"></i><span class="tw-sr-only">詳細內容</span></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+{{>pagination simple=true pageArrowText=false pageSelect=true pageSum='2'}}
+{{>modal-content id='detail' wide=true modal-title='標題名稱'}}
+{{>modal-content id='detail2' wide=true modal-title='標題名稱2'}}
+{{/if}}

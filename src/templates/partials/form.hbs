@@ -1,0 +1,257 @@
+<form onsubmit="return false;">
+  {{#if formTitleOn}}
+  <h2 class="tw-text-3xl">{{formTitle}}</h2>
+  {{/if}}
+  {{#if horizontal}}
+  <!-- grid -->
+  <div class="margin_y_child-even-m margin_y_child-m@m uk-grid uk-grid-collapse uk-flex-right uk-flex-middle" uk-grid>
+    <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-name">姓名</label>
+    </div>
+    <!-- /label -->
+    <!-- input -->
+    <div class="uk-width-2-3@m uk-grid-margin">
+      <input id="f-name" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /input -->
+    <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label">性別</label>
+    </div>
+    <!-- /label -->
+    <!-- radio -->
+    <div class="uk-width-2-3@m">
+      <label><input class="tw-mr-1 uk-radio" type="radio" name="sex" checked>男</label>
+      <label><input class="tw-mr-1 uk-radio" type="radio" name="sex">女</label>
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /radio -->
+    {{!-- <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-sex">科別</label>
+    </div>
+    <!-- /label -->
+    <!-- select & input -->
+		<div class="uk-width-2-3@m">
+			<div class="uk-margin uk-grid-small uk-child-width-expand@m" uk-margin uk-grid>
+				<div class="min_width1_2!@m">
+					<select id="f-dep" class="uk-select" onchange="showOption(this,5,'#other_dep')">
+						<option>-請選擇科別-</option>
+						<option>整形外科</option>
+					</select>
+				</div>
+				<div id="other_dep" class="min_width1_2!@m" hidden>
+					<div class="uk-hidden@m" style="height: 10px;"></div>
+					<input class="uk-input" type="text" placeholder="請輸入科別" title="輸入關鍵字搜尋">
+				</div>
+			</div>
+		</div>
+    <!-- /select & input --> --}}
+    <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-firm">服務單位</label>
+    </div>
+    <!-- /label -->
+    <!-- input -->
+    <div class="uk-width-2-3@m uk-grid-margin">
+      <input id="f-firm" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /input -->
+    <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-position">職稱</label>
+    </div>
+    <!-- /label -->
+    <!-- input -->
+    <div class="uk-width-2-3@m uk-grid-margin">
+      <input id="f-position" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /input -->
+    <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-phone">連絡電話</label>
+    </div>
+    <!-- /label -->
+    <!-- input -->
+    <div class="uk-width-2-3@m uk-grid-margin">
+      <div class="uk-grid uk-grid-small uk-flex-middle" uk-grid>
+        <div class="uk-width-expand">
+          <input id="f-phone" class="uk-input" type="tel" placeholder="" pattern="[0-9]{8}|[0-9]{10}">
+          {{#if errorOn}}
+          <p class="color_primary tw-text-sm">{{error}}</p>
+          {{/if}}
+        </div>
+        <div class="uk-width-auto">
+          <label class="tw-text-base tw-font-medium tw-pr-1 uk-form-label" for="f-ext">分機</label>
+          <input id="f-ext" class="uk-input" type="tel" placeholder="" pattern="[0-9]{3}">
+        </div>
+      </div>
+    </div>
+    <!-- /input -->
+    <!-- label -->
+    <div class="uk-width-1-3@m">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-email">電子郵件</label>
+    </div>
+    <!-- /label -->
+    <!-- input -->
+    <div class="uk-width-2-3@m uk-grid-margin">
+      <input id="f-email" class="uk-input" type="email" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /input -->
+    <!-- button -->
+    <div class="m:tw-mt-8 uk-width-1-1">
+      <div class="tw-space-y-1 min_width-1/2!@m">
+        <a href="#" class="btn_primary tw-w-full rounded-full uk-button uk-button-primary">確定</a>
+      </div>
+    </div>
+    <!-- /button -->
+    {{!-- <div class="uk-width-1-1">
+			<div class="uk-grid-small uk-child-width-expand uk-grid" uk-grid>
+				<div class="tw-space-y-1 min_width-1/2!@m">
+					<a href="#" class="btn_primary tw-w-full rounded-full uk-button uk-button-primary">確定</a>
+				</div>
+				<div class="tw-space-y-1 min_width-1/2!@m">
+					<a href="#" class="tw-w-full rounded-full uk-button uk-button-default" type="reset">取消</a>
+				</div>
+			</div>
+		</div> --}}
+  </div>
+  <!-- /grid -->
+  {{else}}
+  <!-- grid -->
+  <div class="uk-grid uk-grid-small{{#if stack}} uk-flex-column{{else}} uk-child-width-expand@s{{/if}}" uk-grid>
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-name">姓名</label>
+      <input id="f-name" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <div class="tw-text-base tw-font-medium uk-form-label" aria-labelledby="f-sex">性別</div>
+      <div id="f-sex">
+        <label class="tw-pr-4"><input class="tw-mr-1 uk-radio" type="radio" name="sex" checked>男</label>
+        <label class="tw-pr-4"><input class="tw-mr-1 uk-radio" type="radio" name="sex">女</label>
+      </div>
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-firm">服務單位</label>
+      <input id="f-firm" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-position">職稱</label>
+      <input id="f-position" class="uk-input" type="text" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-phone">連絡電話</label>
+      <div class="uk-grid uk-grid-small" uk-grid>
+        <div class="uk-width-expand">
+          <input id="f-phone" class="uk-input" type="tel" placeholder="" pattern="[0-9]{8}|[0-9]{10}">
+        </div>
+        <div class="uk-width-auto">
+          <label class="tw-pr-1" for="f-ext">分機</label>
+          <input id="f-ext" class="tw-w-20 uk-input" type="tel" placeholder="" pattern="[0-9]{3}">
+        </div>
+      </div>
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-email">電子郵件</label>
+      <input id="f-email" class="uk-input" type="email" placeholder="">
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <div class="tw-text-base tw-font-medium uk-form-label" aria-labelledby="f-time">適合聯絡時間</div>
+      <div id="f-time">
+        <label class="tw-pr-4"><input class="tw-mr-1 uk-radio" type="radio" name="time" checked>上午 (9:00-12:00)</label>
+        <label class="tw-pr-4"><input class="tw-mr-1 uk-radio" type="radio" name="time">下午 (14:00-17:00)</label>
+        <label class="tw-pr-4"><input class="tw-mr-1 uk-radio" type="radio" name="time">隨時</label>
+      </div>
+    </div>
+    <!-- /form item -->
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-recommend">問題與建議</label>
+      <textarea id="f-recommend" class="uk-textarea" type="text" placeholder=""></textarea>
+    </div>
+    <!-- /form item -->
+    {{#if captcha}}
+    <!-- form item -->
+    <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s uk-width-1-2@m{{/if}}">
+      <label class="tw-text-base tw-font-medium uk-form-label" for="f-cap">驗證碼</label>
+      <div class="uk-grid uk-grid-small" uk-grid>
+        <div class="uk-width-expand">
+          <input id="f-cap" class="uk-input" type="text" placeholder="">
+        </div>
+        <div class="uk-width-auto">
+          {{#if playAudio}}
+          <a class="btnPlayAudio tw-mr-2" href="" title="播放驗證碼語音" playaudio='img/audio.wav'><i class="fas fa-volume-up"></i><span class="tw-sr-only">播放驗證碼語音</span></a>
+          {{/if}}
+          <img class="tw-inline-block tw-mr-2" data-src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼圖片" uk-img>
+          <a href="javavscript:void(0);" title="更新驗證碼圖片"><i class="fas fa-redo"></i><span class="tw-sr-only">更新驗證碼圖片</span></a>
+        </div>
+      </div>
+      {{!-- <input id="f-cap" class="uk-input" type="text" placeholder=""> --}}
+      {{#if errorOn}}
+      <p class="color_primary tw-text-sm">{{error}}</p>
+      {{/if}}
+    </div>
+    {{!-- <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} min_width-1/2!@s{{/if}}">
+      <span class="tw-w-full uk-visible@m"></span>
+      <a class="tw-mr-2" href="#" title="播放驗證碼語音"><i class="fas fa-redo"></i><span class="tw-sr-only">重新換圖</span></a>
+      <img class="tw-inline-block tw-mr-2" data-src="http://fakeimg.pl/150x40/" width="150" height="40" alt="驗證碼圖片" uk-img>
+      <a href="#" title="更新驗證碼圖片"><i class="fas fa-redo"></i><span class="tw-sr-only">重新換圖</span></a>
+    </div> --}}
+    <!-- /form item -->
+    {{/if}}
+    <!-- button -->
+    <div class="m:tw-mt-2 tw-mx-auto uk-width-1-1">
+      <div class="uk-grid uk-grid-small{{#if stack}} uk-flex-column{{else}} uk-child-width-expand{{/if}}" uk-grid>
+        <div class="tw-space-y-1{{#if stack}} tw-mx-auto{{stackClass}}{{else}} uk-text-nowrap{{/if}}">
+          <a href="" class="btn_primary tw-w-full uk-button uk-button-primary">確定</a>
+        </div>
+      </div>
+    </div>
+    <!-- /button -->
+  </div>
+  <!-- /grid -->
+  {{/if}}
+</form>

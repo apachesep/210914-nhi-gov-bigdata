@@ -1,0 +1,302 @@
+{{!-- {{>searchBox searchBoxClass='' searchBoxTitle=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' radioBoxBar=false select=true selectLabel='類型選項' selectOptionl='題名' placeholder='請輸入檢索詞' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=true optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=true checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門檢索詞：'}} --}}
+{{!-- <form onsubmit="return false;"></form> --}}
+<!-- searchBox -->
+<div class="searchBox{{searchBoxClass}} tw-space-y-3">
+	{{#if searchBoxTitle}}
+	<!-- searchBox title -->
+	<div class="uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+		<p class="{{#if small}}tw-text-sm {{/if}}">{{searchBoxTitleLeft}}</p>
+		<p class="{{#if small}}tw-text-sm {{/if}}">{{searchBoxTitleRight}}</p>
+	</div>
+	<!-- /searchBox title -->
+	{{/if}}
+	{{#if radioBoxBar}}
+	<!-- Radiobox Bar -->
+	<div class="radioBoxBar uk-grid uk-grid-small uk-child-width-auto">
+		<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-radio" type="radio" name="radio" checked>精確檢索</label>
+		<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-radio" type="radio" name="radio">模糊檢索</label>
+		<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-radio" type="radio" name="radio">完全符合</label>
+	</div>
+	<!-- /Radiobox Bar -->
+	{{/if}}
+	<!-- uk-grid -->
+	<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+		{{#if select}}
+		<!-- select -->
+		<div class="min_width-1/4! uk-width-auto@s">
+			<label>
+				<span class="tw-sr-only">{{selectLabel}}</span>
+				<select class="uk-select" title="{{selectLabel}}">
+					<option value="0" selected>{{selectOptionl}}</option>
+					<option value="">option</option>
+				</select>
+			</label>
+		</div>
+		<!-- /select -->
+		{{/if}}
+		<!-- input -->
+		<div class="{{#if select}}min_width-1/2!{{else}}{{inputClass}}{{/if}}">
+			<div class="uk-flex uk-flex-middle">
+				<div class="tw-flex-auto">
+					<label>
+						<span class="tw-sr-only">{{placeholder}}</span>
+						<input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+					</label>
+				</div>
+				{{#if 2ndInput}}
+				<div class="tw-px-2">或</div>
+				<div class="tw-flex-auto">
+					<label>
+						<span class="tw-sr-only">{{2ndPlaceholder}}</span>
+						<input class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+					</label>
+				</div>
+				{{/if}}
+				{{!-- <!-- <div class="tw-flex-auto"><a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}min_width-100! tw-w-full uk-button uk-button-primary" href="#search" uk-toggle>病症瀏覽</a></div> --> --}}
+			</div>
+		</div>
+		<!-- /input -->
+		{{#if selectRight1}}
+		<!-- select -->
+		<div class="{{selectRight1Class}}uk-width-auto@s">
+			<label>
+				<span class="tw-sr-only">{{selectRight1Label}}</span>
+				<select class="uk-select" title="{{selectRight1Label}}">
+					<option value="0" selected>{{selectRight1Optionl}}</option>
+					<option value="">option</option>
+				</select>
+			</label>
+		</div>
+		<!-- /select -->
+		{{/if}}
+		{{#if secondInput}}
+		<!-- input -->
+		<div class="{{#if select}}min_width-1/2!{{else}}{{secondInputClass}}uk-width-expand@s{{/if}}">
+			<div class="uk-flex uk-flex-middle">
+				<div class="tw-flex-auto">
+					<label>
+						<span class="tw-sr-only">{{SIPlaceholder}}</span>
+						<input class="uk-input" type="text" placeholder="{{SIPlaceholder}}" title="{{SIPlaceholder}}">
+					</label>
+				</div>
+				{{#if SIinSecondInput}}
+				<div class="tw-px-2">或</div>
+				<div class="tw-flex-auto">
+					<label>
+						<span class="tw-sr-only">{{SISIPlaceholder}}</span>
+						<input class="uk-input" type="text" placeholder="{{SISIPlaceholder}}" title="{{SISIPlaceholder}}">
+					</label>
+				</div>
+				{{/if}}
+				{{!-- <!-- <div class="tw-flex-auto"><a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}min_width-100! tw-w-full uk-button uk-button-primary" href="#search" uk-toggle>病症瀏覽</a></div> --> --}}
+			</div>
+		</div>
+		<!-- /input -->
+		{{/if}}
+		{{#if selectRight2}}
+		<!-- select -->
+		<div class="{{selectRight2Class}}uk-width-auto@s">
+			<label>
+				<span class="tw-sr-only">{{selectRight2Label}}</span>
+				<select class="uk-select" title="{{selectRight2Label}}">
+					<option value="0" selected>{{selectRight2Optionl}}</option>
+					<option value="">option</option>
+				</select>
+			</label>
+		</div>
+		<!-- /select -->
+		{{/if}}
+		{{#if selectRight3}}
+		<!-- select -->
+		<div class="{{selectRight3Class}}uk-width-auto@s">
+			<label>
+				<span class="tw-sr-only">{{selectRight3Label}}</span>
+				<select class="uk-select" title="{{selectRight3Label}}">
+					<option value="0" selected>{{selectRight3Optionl}}</option>
+					<option value="">option</option>
+				</select>
+			</label>
+		</div>
+		<!-- /select -->
+		{{/if}}
+		{{#if multipleSelectRight1}}
+		<!-- select -->
+		<div class="min_width-1/2! min_width-2/3!@s min_width-1/2!@m uk-width-auto@s">
+			<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+				<div>
+					<label>
+						<span class="tw-sr-only">{{multipleSelectRight1aLabel}}</span>
+						<select class="uk-select" title="{{multipleSelectRight1aLabel}}">
+							<option value="0" selected>{{multipleSelectRight1aOptionl}}</option>
+							<option value="">option</option>
+						</select>
+					</label>
+				</div>
+				<div>
+					<label>
+						<span class="tw-sr-only">{{multipleSelectRight1bLabel}}</span>
+						<select class="uk-select" title="{{multipleSelectRight1bLabel}}">
+							<option value="0" selected>{{multipleSelectRight1bOptionl}}</option>
+							<option value="">option</option>
+						</select>
+					</label>
+				</div>
+				<div>
+					<label>
+						<span class="tw-sr-only">{{multipleSelectRight1cLabel}}</span>
+						<select class="uk-select" title="{{multipleSelectRight1cLabel}}">
+							<option value="0" selected>{{multipleSelectRight1cOptionl}}</option>
+							<option value="">option</option>
+						</select>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- /select -->
+		{{/if}}
+		{{#if multipleSelectRight2}}
+		<!-- select -->
+		<div class="min_width-1/2! min_width-2/3!@s min_width-1/2!@m uk-width-auto@s">
+			<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+				<div>
+					<label>
+						<span class="tw-sr-only">{{multipleSelectRight2aLabel}}</span>
+						<select class="uk-select" title="{{multipleSelectRight2aLabel}}">
+							<option value="0" selected>{{multipleSelectRight2aOptionl}}</option>
+							<option value="">option</option>
+						</select>
+					</label>
+				</div>
+				<div>
+					<label>
+						<span class="tw-sr-only">{{multipleSelectRight2bLabel}}</span>
+						<select class="uk-select" title="{{multipleSelectRight2bLabel}}">
+							<option value="0" selected>{{multipleSelectRight2bOptionl}}</option>
+							<option value="">option</option>
+						</select>
+					</label>
+				</div>
+				<div>
+					<label>
+						<span class="tw-sr-only">{{multipleSelectRight2cLabel}}</span>
+						<select class="uk-select" title="{{multipleSelectRight2cLabel}}">
+							<option value="0" selected>{{multipleSelectRight2cOptionl}}</option>
+							<option value="">option</option>
+						</select>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- /select -->
+		{{/if}}
+		<!-- search button -->
+		<div class="{{#if searchButtonExpand}}min_width-100! min_width-150!@l uk-width-expand@s{{else}}min_width-100!{{searchButtonExpandClass}}{{/if}} uk-text-nowrap">
+			<a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-2 fas fa-search"></i>{{searchButtonName}}</a>
+		</div>
+		<!-- /search button -->
+		{{#if 2ndButton}}
+		<!-- 2nd button -->
+		<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
+			<a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}tw-w-full uk-button uk-button-primary">{{#if 2ndButtonFaicon}}<i class="tw-mr-2 {{2ndButtonFaiconClasses}}"></i>{{/if}}{{2ndButtonName}}</a>
+		</div>
+		<!-- /2nd button -->
+		{{/if}}
+		{{#if 3rdButton}}
+		<!-- 3rd button -->
+		<div class="min_width-100! uk-width-auto@s uk-text-nowrap">
+			<a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}tw-w-full uk-button uk-button-primary">{{#if 3rdButtonFaicon}}<i class="tw-mr-2 {{3rdButtonFaiconClasses}}"></i>{{/if}}{{3rdButtonName}}</a>
+		</div>
+		<!-- /3rd button -->
+		{{/if}}
+	</div>
+	<!-- /uk-grid -->
+	{{#if bottomOption}}
+	<!-- Bottom Option -->
+	<div class="tw-space-y-2">
+		{{#if keywordAndButtons}}
+		<!-- Keywords and Buttons -->
+		<div class="keywordAndButtons uk-flex-maiddle uk-grid uk-grid-small" uk-grid>
+			<!-- Keyword-->
+			<div class="uk-width-expand@m">
+				<div class="uk-grid uk-grid-small uk-child-width-auto" uk-grid>
+					<div>{{keywordsTitle}}<span class="{{#if colorSecondary}}color_secondary {{else}}color_primary{{/if}} pseudo:quote">{{keyword}}</span></div>
+					<div>檢索結果：<span class="{{#if colorSecondary}}color_secondary {{else}}color_primary{{/if}} tw-pr-1">100</span>筆資料</div>
+					<div class="uk-flex uk-flex-middle"><a class="bg_grey-200 tw-py-0 tw-text-xs tw-leading-normal uk-button uk-button-primary uk-button-small" href="">歷史</a></div>
+				</div>
+			</div>
+			<!-- /Keyword-->
+			<!-- Buttons -->
+			<div class="uk-width-auto@m">
+				<div class="tw--ml-2 uk-grid uk-grid-small uk-child-width-auto" uk-grid>
+					<div class="tw-pl-2"><a class="bg_grey-200 uk-button uk-button-primary uk-button-small" href="">儲存</a></div>
+					<div class="tw-pl-2"><a class="bg_grey-200 uk-button uk-button-primary uk-button-small" href="">列印</a></div>
+					<div class="tw-pl-2"><a class="bg_grey-200 uk-button uk-button-primary uk-button-small" href="">E-Mail</a></div>
+					<div class="tw-pl-2"><a class="bg_grey-200 uk-button uk-button-primary uk-button-small" href="">收藏</a></div>
+				</div>
+			</div>
+			<!-- /Buttons -->
+		</div>
+		<!-- /Keywords and Buttons -->
+		{{/if}}
+		{{#if optionText}}
+		<!-- option text -->
+		<div class="uk-clearfix">
+			{{#if leftHref}}
+			<div class="float-left"><a class="color_primary" href="#">{{leftHrefName}}</a></div>
+			{{/if}}
+			{{#if leftText}}
+			<div class="float-left">{{leftTxtName}}</div>
+			{{/if}}
+			{{#if rightHref}}
+			<div class="float-right"><a class="color_primary" href="#">{{rightHrefName}}</a></div>
+			{{/if}}
+		</div>
+		<!-- /option text -->
+		{{/if}}
+		{{#if checkbox}}
+		<!-- checkbox -->
+		<div class="tw-flex">
+			<span class="tw-flex-none">{{checkboxTitle}}</span>
+			<div>
+				<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type1}}</label>
+				<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type2}}</label>
+				<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type3}}</label>
+				{{#if checkboxType4}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type4}}</label>{{/if}}
+				{{#if checkboxType5}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type5}}</label>{{/if}}
+				{{#if checkboxType6}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type6}}</label>{{/if}}
+				{{#if checkboxType7}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb1Type7}}</label>{{/if}}
+			</div>
+		</div>
+		<!-- /checkbox -->
+		{{/if}}
+		{{#if checkbox2}}
+		<!-- checkbox -->
+		<div class="tw-flex">
+			<span class="tw-flex-none">{{checkbox2Title}}</span>
+			<div>
+				<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type1}}</label>
+				<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type2}}</label>
+				<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type3}}</label>
+				{{#if checkbox2Type4}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type4}}</label>{{/if}}
+				{{#if checkbox2Type5}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type5}}</label>{{/if}}
+				{{#if checkbox2Type6}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type6}}</label>{{/if}}
+				{{#if checkbox2Type7}}<label class="tw-inline-block tw-mr-4"><input class="tw-mr-1 uk-checkbox" type="checkbox">{{cb2Type7}}</label>{{/if}}
+			</div>
+		</div>
+		<!-- /checkbox -->
+		{{/if}}
+		{{#if keywords}}
+		<!-- keywords -->
+		<div class="keywords tw-leading-normal">
+			<span>{{keywordsTitle}}</span>
+			<span class="pseudo:comma_ch tw-inline-block"><a class="tw-underline hover:tw-no-underline" href="#">每議人已識影</a></span>
+			<span class="pseudo:comma_ch tw-inline-bloc"><a class="tw-underline hover:tw-no-underline" href="#">期異回麼響</a></span>
+			<span class="pseudo:comma_ch tw-inline-bloc"><a class="tw-underline hover:tw-no-underline" href="#">研能感表</a></span>
+		</div>
+		<!-- keywords -->
+		{{/if}}
+	</div>
+	<!-- /Bottom Option -->
+	{{/if}}
+</div>
+<!-- /searchBox -->

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="text-m" lang="zh-Hant">
+	<head>
+		{{>meta editor=true}}
+	</head>
+
+	<body id="top" class="page{{#if focusForAA}} focus{{/if}}">
+		<span class="tw-hidden">Some images has been designed using resources from <a href="https://unsplash.com/">Unsplash</a> &amp; <a href="https://pixabay.com/">Pixabay</a> &amp; <a href="https://www.freepik.com/">Freepik</a></span>
+		{{>header shadow=false topNav=false stickyBgColor='' navAbsolute=false logoNavClass=' m:tw-pb-8' logoBgClass=' s:tw-py-2 m:tw-py-4' logoBackground=true logoBackgroundClass='tw-bg-white tw-opacity-50' logoRightNav=true navIcon=true navVLine=false textSize=true textSizeClass='' iconSearch=false dropdownSearch=true offcanvasBtnColor=' color_primary' mainMenu=true mainMenuClass='' mainMenuBg=true secondary=false title5=true title6=true title7=true menuTitle1='名詞查詢' menuTitle2='下載專區' menuTitle3='名詞比對' menuTitle4='名詞建議' menuTitle5='審議會' menuTitle6='會員專區' menuTitle7='關於我們' banner=false}}
+		{{!-- {{>header logoRightNav=true mainMenu=true menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink=true menuTitle6link=''}} --}}
+
+		{{>pageContent containerXlarge=true breadcrumb=true BreadcrumbUserVisibleOnDesk=true breadcrumb1=true breadcrumbLink1='#' breadcrumbTxt1='Link1' breadcrumbCurrent='Current' userOn=true user='陳大天' linkLogout='index.html' leftMenu=true leftMenu3level=true h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' content='editor' editor=true pageTitle='標題名稱'}}
+		{{!-- {{>pageContent-bs containerXlarge=true breadcrumb=true BreadcrumbUserVisibleOnDesk=true breadcrumb1=true breadcrumbLink1='#' breadcrumbTxt1='Link1' breadcrumbCurrent='Current' userOn=true user='陳大天' linkLogout='index.html' leftMenu=true leftMenu3level=true h2linkBack=true h2linkBackHref='#' h2linkBackTxt='回上頁' h2buttonMobile=true h2buttonMobileClasses='btn_primary tw-mt-2 uk-button uk-button-small uk-button-primary' h2buttonMobileName='分類選單' h2buttonDropdown=true content='editor' pageTitle='標題名稱'}} --}}
+
+		{{>footer mask=false footerWide=false sitemap=false border=false gradientLine=false gridDivider=false topLink=false topLinkIcon=false topLinkIconClass='fas fa-caret-right' borderWhite=false textCenter=false topInfo=false links=true navVLine=true online=false iconOnline='fas fa-eye' today=false iconToday='fas fa-user' sum=true iconSum='fas fa-users' infoBG=true secondaryBG=false vertical=false colorPrimary=false colorSecondary=false sitemap=false privacy=false rightCols=true}}
+		{{!-- {{>footer}} --}}
+
+		{{#if jqueryBody}}
+
+		<!-- jq:js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+		<!-- bs:js -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+	</body>
+</html>

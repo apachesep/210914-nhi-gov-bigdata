@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="text-m" lang="zh-Hant">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="Designer&Developer" content="楊軒羽 Shen Yang | Graphic Web Designer & Front-end Developer | 前端設計工程師">
+		<title>健保署</title>
+		<!-- favicon -->
+		<link rel="shortcut icon" type="image/svg" href="img/favicon.svg" />
+		<!-- /favicon -->
+		<link rel="stylesheet" href="css/uikit.min.css">
+		<link rel="stylesheet" href="css/tailwind.min.css">
+		<link rel="stylesheet" href="css/fontawesome.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/colors.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+		<script src="js/uikit.min.js"></script>
+		<script src="js/uikit-icons.min.js"></script>
+		<script src="js/chart.min.js"></script>
+		<script src="js/script.min.js" defer></script>
+	</head>
+
+	<body id="top" class="prescription page tw-relative">
+		<span class="tw-hidden">Some images has been designed using resources from <a href="https://unsplash.com/">Unsplash</a> &amp; <a href="https://pixabay.com/">Pixabay</a> &amp; <a href="https://www.freepik.com/">Freepik</a></span>
+		<!-- header -->
+		<header>
+			<div class="uk-sticky" uk-sticky="media: (max-width: 959px); cls-active: tw-shadow-md">
+				<nav class="tw-w-full tw-z-10">
+					<!-- logo & sideLinks -->
+					<div class="logoBG s:tw-py-1 m:tw-py-2 tw-relative">
+						<!-- color background -->
+						<div class="tw-bg-white tw-opacity-50 uk-position-cover"></div>
+						<!-- color background -->
+						<!-- container -->
+						<div class="tw-text-white tw-relative uk-container">
+							<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+								<!-- logo -->
+								<div class="logo">
+									<h1 class="tw-m-0 tw-text-base">
+										<a class="logoimg tw-no-underline uk-flex uk-flex-middle" href="Bindex.html" title="健保署">
+											<span class="tw-sr-only">健保署</span>
+											<img class="uk-preserve" data-src="img/logoB.svg" data-width data-height alt="健保署" uk-img uk-svg>
+										</a>
+									</h1>
+								</div>
+								<!-- /logo -->
+								<!-- sideLinks -->
+								<div class="tw-m-0 tw-relative uk-width-auto">
+									<div class="sub_nav uk-flex uk-flex-middle">
+										<span><a class="tw-px-2" href="index.html" title="回首頁"><i class="fas fa-home"></i><span class="tw-sr-only">回首頁</span></a></span>
+										<span><a class="tw-px-2" href="" title="登出"><i class="fas fa-sign-out-alt"></i><span class="tw-sr-only">登出</span></a></span>
+									</div>
+								</div>
+								<!-- /sideLinks -->
+							</div>
+						</div>
+						<!-- /container -->
+					</div>
+					<!-- /logo & sideLinks -->
+				</nav>
+			</div>
+		</header>
+		<!-- /header -->
+		<!-- main content -->
+		<section id="content" class="tw-px-0 tw-space-y-2 m:tw-space-y-4 tw-relative" uk-height-viewport="expand: true">
+		  <p class="name tw-text-xl tw-font-semibold tw-m-0 uk-text-center"><i class="tw-mr-2 fas fa-user-circle" alt=''></i>張大明</p>
+		  <!-- container -->
+		  <div class="tw-space-y-4 tw-relative uk-container">
+		    <div class="tw-space-y-4 tw-relative">
+		      <!-- prescription -->
+		      <div class="prescription">
+		        <!-- categray title -->
+		        <div class="bg_secondary tw-px-2 tw-py-1 uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+		          <h2 class="tw-px-1 tw-m-0 tw-text-base tw-font-medium">2021/09/19慢箋</h2>
+		        </div>
+		        <!-- /categray title -->
+		        
+		        <!-- categray content -->
+		        <div class="tw-p-3 tw-shadow hover:tw-shadow-xl uk-card uk-card-default">
+		          <div class="min_height-70@s">
+		            <div class="uk-grid uk-grid-divider uk-grid-small uk-child-width-1-1  uk-child-width-expand@s" uk-grid>
+		              <!-- qrcode -->
+		              <div>
+		                <img class="uk-width-expand uk-width-1-2@s" data-src="img/qrcode.svg" alt="qrcode" width="100" height="100" uk-img>
+		              </div>
+		              <!-- /qrcode -->
+		              <!-- drug -->
+		              <div>
+		                <p class="tw-m-0 tw-font-semibold">處方內容</p>
+		                <ol>
+		                  <li>藥物</li>
+		                  <li>藥物</li>
+		                </ol>
+		              </div>
+		              <!-- /drug -->
+		              <!-- date & hospital -->
+		              <div>
+		                <ul class="tw-m-0">
+		                  <li>開處方日期：</li>
+		                  <li>開處方醫院：</li>
+		                </ul>
+		              </div>
+		              <!-- /date & hospital -->
+		            </div>
+		          </div>
+		        </div>
+		        <!-- /categray content -->
+		      </div>
+		      <!-- /prescription -->
+		    </div>
+		  </div>
+		  <!-- /container -->
+		</section>
+		<!-- /main content -->
+
+		<!-- footer -->
+		<footer class="tw-relative tw-mt-4 m:tw-mt-8">
+			<div class="tw-p-4 l:tw-px-8 m:tw-py-6 tw-m-auto uk-width-2-3@xl">
+				<!-- relative -->
+				<div class="tw-relative">
+					<p class="tw-m-0 uk-text-center">Copyright © 2021衛生福利部中央健康保險署<span class="tw-block s:tw-inline s:tw-pl-2">版權所有</span></p>
+				</div>
+				<!-- /relative -->
+			</div>
+		</footer>
+		<!-- /footer -->
+		<a id="gototop" class="hover:color_white tw-text-white tw-bg-black tw-bg-opacity-50 hover:tw-bg-opacity-70 tw-opacity-0 tw-no-underline tw-p-2 tw-px-3 tw-rounded tw-text-center tw-fixed tw-bottom-0 tw-right-0 tw-mr-3 tw-mb-3" href="javascript:void(0)" title="回到最上"><i class="fas fa-angle-up"></i><span class="tw-sr-only">回到最上</span></a>
+
+		<!-- buttons -->
+		<div class="buttons bg_secondary tw-fixed uk-position-bottom">
+		  <div class="tw-py-3 uk-container">
+		    <div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
+		      <div class="min_width-1/3">
+		        <a class="tw-text-white hover:tw-opacity-80 tw-border tw-border-white tw-no-underline tw-px-1 tw-py-2 tw-text-center tw-block" href="">慢箋掃描
+		        </a>
+		      </div>
+		      <div class="min_width-1/3">
+		        <a class="tw-text-white hover:tw-opacity-80 tw-border tw-border-white tw-no-underline tw-px-1 tw-py-2 tw-text-center tw-block" href="B03history.html">領藥歷史
+		        </a>
+		      </div>
+		      <div class="min_width-1/3">
+		        <a class="tw-text-white hover:tw-opacity-80 tw-border tw-border-white tw-no-underline tw-px-1 tw-py-2 tw-text-center tw-block" href="B04pharmacy.html">我的藥局
+		        </a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- /buttons -->
+	</body>
+</html>

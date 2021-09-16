@@ -1,0 +1,19 @@
+<!-- main content -->
+<section id="content" class="tw-px-0{{#if searchBoxBanner}} tw-pt-0{{else}}{{/if}} tw-space-y-2 m:tw-space-y-4 tw-relative" uk-height-viewport="expand: true">
+  {{#if hrefForAA}}
+  <!-- accesskey -->
+  <div class="uk-position-relative uk-visible@m">
+    <a class="tw-no-underline tw-px-1 uk-position-absolute" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:5px; top:20px; z-index:1;">:::</a>
+  </div>
+  <!-- /accesskey -->
+  {{/if}}
+  {{#if name}}
+  <p class="name tw-text-xl tw-font-semibold tw-m-0 uk-text-center"><i class="tw-mr-2 fas fa-user-circle" alt=''></i>張大明</p>
+  {{/if}}
+  <!-- container -->
+  <div class="tw-space-y-4 tw-relative uk-container">
+    {{> (lookup . 'content') }}
+  </div>
+  <!-- /container -->
+</section>
+<!-- /main content -->

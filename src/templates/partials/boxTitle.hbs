@@ -1,0 +1,12 @@
+{{!-- {{>boxTitle h2headingLine=false h2color='' h2fullBG=false h2fullBGshadow=false moreClass='' h2bg=false h2icon=true iconSecondary=false iconBg=false iconBgSecondary=false h2iconName='fas fa-bullhorn' title='最新消息' h2more=true}} --}}
+{{#if h2headingLine}}
+<h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-bullhorn"></i>{{title}}</h2>
+{{else}}
+<!-- categray title -->
+<div class="{{h2color}}{{#if h2fullBG}}bg_primary {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}{{moreClass}}uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+  <h2 class="{{#if h2bg}}bg_primary tw-px-2 {{/if}}tw-m-0 tw-pb-2 tw-text-xl tw-font-medium">{{#if h2icon}}<i class="{{#if iconSecondary}}color_secondary {{else}}color_primary {{/if}}{{#if iconBg}}{{#if iconBgSecondary}}bg_secondary {{else}}bg_primary {{/if}}tw-p-1 tw-mr-2 {{/if}}tw-mr-1 {{h2iconName}}"></i>{{/if}}{{title}}</h2>
+  {{!-- fas fa-square-full --}}
+  {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+</div>
+<!-- /categray title -->
+{{/if}}

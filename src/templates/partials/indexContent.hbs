@@ -1,0 +1,331 @@
+{{#if slideshow}}
+{{>slideshow smallSlide=false slidenavThick=true heightFull=false option='autoplay: true; animation: fade; min-height: 300; max-height: 600' img1Src='img/slide1.png' img1Alt='博觀厚積30年' img2Src='img/slide2.png' img2Alt='新知飛傳千萬千，飛資得專注為您' slide3=true img3Src='https://fakeimg.pl/1920x700' img3Alt='圖片尺寸' imgCover=true caption=false largeDotnav=true dotNav=true}}
+{{/if}}
+{{#if searchBoxBanner}}
+<!-- Search Box -->
+<div class="searchBoxBanner{{searchBoxBannerClass}}"{{#if heightViewport}} uk-height-viewport="offset-top: true"{{/if}}>
+  {{#if tabBox}}
+  <div class="tw-m-auto tw-relative uk-width-5-6@m uk-width-2-3@l">
+    {{#if hrefForAA}}
+    <!-- accesskey -->
+    <div class="uk-position-relative uk-visible@m">
+      <a class="tw-no-underline tw-px-1 uk-position-absolute" href="#X" id="AX" name="X" title="搜尋區塊" accesskey="X" style="left:-30px; top:1px; z-index:1;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{/if}}
+    <ul class="tab_btn tab_btn-active-white tab_btn-space-s! tw-m-0 uk-tab" uk-tab>
+      <li class="tw-p-0"><a href="#">{{tabBoxTab1Name}}</a></li>
+      <li class="tw-p-0"><a href="#">{{tabBoxTab2Name}}</a></li>
+      {{#if tabBoxTab3}}<li class="tw-p-0"><a href="#">{{tabBoxTab3Name}}</a></li>{{/if}}
+      {{#if tabBoxTab4}}<li class="tw-p-0"><a href="#">{{tabBoxTab4Name}}</a></li>{{/if}}
+    </ul>
+    <ul class="min_height-110 min_height-380@s tw-shadow-md{{#if searchBoxBg}}{{searchBoxBgColor}}{{/if}} tw-p-2 m:tw-p-6{{#if tabBoxSwitcher}} uk-switcher{{else}} uk-list{{/if}}">
+      <li>
+        <form onsubmit="return false;">
+          {{>searchBox searchBoxTitle=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' select=true selectLabel='類型選項' selectOptionl='題名' placeholder='請輸入檢索詞' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=true optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=true checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門檢索詞：'}}
+        </form>
+      </li>
+      <li>
+        {{#if content2}}
+        {{>searchBoxPlus alertClass=' tw-bg-white' selectFirst=false placeholder='請輸入檢索詞' selectOptionName='題名' 2ndSelect=true 2ndSelectOptionName='And' btnSearchFull=true option=true searchButtonName='搜尋'}}
+        {{else}}
+        Tab2 Content
+        {{/if}}
+      </li>
+      {{#if tabBoxTab3}}
+      <li>Tab3 Content</li>
+      {{/if}}
+      {{#if tabBoxTab4}}
+      <li>Tab4 Content</li>
+      {{/if}}
+    </ul>
+  </div>
+  {{else}}
+  <div class="tw-m-auto uk-width-2-3@m uk-width-1-2@xl">
+    {{#if hrefForAA}}
+    <!-- accesskey -->
+    <div class="uk-position-relative uk-visible@m">
+      <a class="tw-no-underline tw-px-1 uk-position-absolute" href="#X" id="AX" name="X" title="搜尋區塊" accesskey="X" style="left:-30px; top:1px; z-index:1;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{/if}}
+    <ul class="tw-m-0 tw-shadow-md tw-bg-white tw-p-6 uk-list">
+      <li>
+        <form>
+          <!-- .searchBar -->
+          <div class="searchBar{{#if searchBoxBg}}{{searchBoxBgColor}}{{/if}}">
+            {{>searchBox searchBoxTitle=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' select=true selectLabel='欄位選項' selectOptionl='-不限欄位-' placeholder='請輸入關鍵字' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=false optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=true checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門檢索詞：'}}
+            {{!-- <small class="tw-mb-1">數位典藏系統可查詢本館數位化特藏資料</small> --}}
+            <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+              <div class="uk-width-auto@s">
+                <select class="tw-w-full uk-select" title="欄位選項">
+                  <option>不限欄位</option>
+                </select>
+              </div>
+              <div class="uk-width-expand@s">
+                <label class="tw-sr-only" for="ip_search">關鍵字搜尋</label>
+                <input id="ip_search" class="tw-w-full uk-input" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
+              </div>
+              <div class="uk-width-auto@s"><a class="btn_primary color_white! min_width-150 tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-1 fas fa-search"></i>搜尋</a>
+              </div>
+            </div>
+          </div>
+          <!-- .searchBar -->
+        </form>
+      </li>
+    </ul>
+  </div>
+  {{/if}}
+</div>
+<!-- /Search Box -->
+{{/if}}
+<!-- index main content -->
+<section id="content" class="tw-px-0{{#if searchBoxBanner}} tw-pt-0{{else}}{{/if}} tw-space-y-2 m:tw-space-y-4 tw-relative" uk-height-viewport="expand: true">
+  {{#if searchBox}}
+  <!-- Search Box -->
+  {{#if tabBox}}
+  <div class="tw-m-auto uk-width-2-3@m uk-width-1-2@xl">
+    <ul class="tab_btn tab_btn-active-white tab_btn-space-s! tw-m-0 uk-tab" uk-tab>
+      <li class="tw-p-0"><a href="#">{{tabBoxTab1Name}}</a></li>
+      <li class="tw-p-0"><a href="#">{{tabBoxTab2Name}}</a></li>
+      {{#if tabBoxTab3}}<li class="tw-p-0"><a href="#">{{tabBoxTab3Name}}</a></li>{{/if}}
+      {{#if tabBoxTab4}}<li class="tw-p-0"><a href="#">{{tabBoxTab4Name}}</a></li>{{/if}}
+    </ul>
+    <ul class="min_height-110 min_height-110@ tw-m-0 tw-shadow-md{{#if searchBoxBg}}{{searchBoxBgColor}}{{/if}} tw-p-6{{#if tabBoxSwitcher}} uk-switcher{{else}} uk-list{{/if}}">
+      <li>
+        <form onsubmit="return false;">
+          {{>searchBox searchBoxTitle=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' select=true selectLabel='類型選項' selectOptionl='題名' placeholder='請輸入檢索詞' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=true optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=true checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門檢索詞：'}}
+        </form>
+      </li>
+      <li>Tab2 Content</li>
+      <li>Tab3 Content</li>
+    </ul>
+  </div>
+  {{else}}
+  <div class="tw-m-auto uk-width-2-3@m uk-width-1-2@xl">
+    <ul class="tw-m-0 tw-shadow-md tw-bg-white tw-p-6 uk-list">
+      <li>
+        <form>
+          <!-- .searchBar -->
+          <div class="searchBar{{#if searchBoxBg}}{{searchBoxBgColor}}{{/if}}">
+            {{>searchBox searchBoxTitle=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' select=true selectLabel='欄位選項' selectOptionl='-不限欄位-' placeholder='請輸入關鍵字' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=false optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=true checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門檢索詞：'}}
+            {{!-- <small class="tw-mb-1">數位典藏系統可查詢本館數位化特藏資料</small> --}}
+            <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+              <div class="uk-width-auto@s">
+                <select class="tw-w-full uk-select" title="欄位選項">
+                  <option>不限欄位</option>
+                </select>
+              </div>
+              <div class="uk-width-expand@s">
+                <label class="tw-sr-only" for="ip_search">關鍵字搜尋</label>
+                <input id="ip_search" class="tw-w-full uk-input" type="text" placeholder="請輸入關鍵字" title="輸入關鍵字搜尋">
+              </div>
+              <div class="uk-width-auto@s"><a class="btn_primary color_white! min_width-150 tw-w-full uk-button uk-button-primary" href="#"><i class="tw-mr-1 fas fa-search"></i>搜尋</a>
+              </div>
+            </div>
+          </div>
+          <!-- .searchBar -->
+        </form>
+      </li>
+    </ul>
+  </div>
+  {{/if}}
+  <!-- /Search Box -->
+  {{/if}}
+  {{#if leftRightGridBg}}
+  <!-- top content -->
+  <div class="uk-grid uk-grid-column-collapse uk-grid-row-medium" uk-grid>
+    <!-- left bg -->
+    <div class="min_width-1/6!@xl">
+      <div class="bg_primary tw-h-full uk-background-cover uk-background-blend-luminosity" style="background-image: url(img/block_bg.png);"></div>
+    </div>
+    <!-- /left bg -->
+    <!-- center content -->
+    <div class="uk-width-2-3@xl">
+      {{#if hrefForAA}}
+      <!-- accesskey -->
+      <div class="uk-position-relative uk-visible@m">
+        <a class="tw-no-underline tw-px-1 uk-position-absolute" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px; top: 10px;">:::</a>
+      </div>
+      <!-- /accesskey -->
+      {{/if}}
+      <!-- grid -->
+      <div class="tw-m-0 uk-grid uk-grid-small uk-child-width-expand@s" uk-grid>
+        <!-- 最新動態 -->
+        <div class="news min_width-2/3!@s bg_color3 tw-px-4 tw-pt-2 tw-pb-4 l:tw-px-8 l:tw-pt-3 l:tw-pb-6" uk-margin>
+          {{>newsBox title='最新動態' h2more=true cols=true gridClass=' uk-grid-column-small uk-grid-row-small uk-child-width-expand@s' colsClass='min_width-1/3!@m' heading=false time=true postby=true}}
+        </div>
+        <!-- /最新動態 -->
+        <!-- 活動資訊 -->
+        <div class="act min_width-1/3!@s bg_color4 xl:tw-rounded-tr-2xl xl:tw-rounded-br-2xl tw-px-4 tw-pt-2 tw-pb-4 l:tw-px-8 l:tw-pt-3 l:tw-pb-6" uk-margin>
+          {{#if h2headingLine}}
+          <h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-star"></i>活動資訊</h2>
+          {{else}}
+          <div class="{{h2color}}{{#if h2fullBG}}bg_primary {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+            <h2 class="{{#if h2bg}}bg_primary tw-px-2 {{/if}}tw-m-0 tw-pb-2 tw-text-xl tw-font-medium">{{#if h2icon}}<i class="color_primary tw-mr-1 {{h2iconName}}"></i>{{/if}}活動資訊</h2>
+            {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+          </div>
+          {{/if}}
+          {{#if iconBox}}
+          {{>iconBox }}
+          {{/if}}
+          {{#if smallSlideshow}}
+          {{>slideshow smallSlide=true slidenavThick=true heightFull=false option='autoplay: true; animation: fade; min-height: 120; max-height: 170' img1Src='https://fakeimg.pl/850x500' img2Src='https://picsum.photos/id/1002/867/510/' imgCover=false caption=false dotNav=false largeDotnav=false}}
+          {{/if}}
+        </div>
+        <!-- /活動資訊 -->
+      </div>
+      <!-- /grid -->
+    </div>
+    <!-- /center content -->
+    <!-- right bg -->
+    <div class="min_width-1/6!@xl"></div>
+    <!-- /right bg -->
+    <!-- left bg -->
+    <div class="min_width-1/6!@xl"></div>
+    <!-- /left bg -->
+    <!-- center content -->
+    <div class="books bg_color3 tw-px-4 tw-pt-2 tw-pb-4 l:tw-px-8 l:tw-pt-3 l:tw-pb-6 xl:tw-rounded-tl-2xl xl:tw-rounded-bl-2xl uk-width-2-3@xl">
+      <!-- 資源推介 -->
+      {{> sliderBox class='' container=false horizontalTxt=true title='資源推介' h2more=false h2links=true h2Links1='系統服務' h2Links2='醫學' h2Links3=true h2Links3name='資訊' h2Links4=true h2Links4name='學術資源' sliderCols='uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-6@m' imgRatio1=false img1='book_01.jpg' img2='book_02.jpg' img3='book_03.jpg' img4='book_04.jpg' img5='book_05.jpg' img6='book_06.jpg'}}
+      <!-- /資源推介 -->
+    </div>
+    <!-- /center content -->
+    <!-- right bg -->
+    <div class="min_width-1/6!@xl">
+      <div class="bg_primary tw-h-full uk-background-cover uk-background-blend-luminosity" style="background-image: url(img/block_bg.png); background-position-x: right;"></div>
+    </div>
+    <!-- /right bg -->
+  </div>
+  <!-- /top content -->
+  {{/if}}
+  {{#if topContent}}
+  <!-- top content -->
+  <div class="tw-m-auto tw-px-2 l:tw-px-8 uk-width-2-3@xl">
+    {{#if hrefForAA}}
+    <!-- accesskey -->
+    <div class="uk-position-relative uk-visible@m">
+      <a class="tw-no-underline tw-px-1 uk-position-absolute" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:-30px; top: 10px;">:::</a>
+    </div>
+    <!-- /accesskey -->
+    {{/if}}
+    <!-- Grid -->
+    <div class="uk-grid uk-grid-small uk-child-width-expand@s" uk-grid uk-height-match="target: > div .uk-card, row: false">
+      {{#if timeAndSearch}}
+      <!-- Time-->
+      <div class="min_width-1/4!@s">
+        {{>timeBox}}
+      </div>
+      <!-- /Time -->
+      <!-- Search -->
+      <div class="min_width-3/4!@s min_width-2/3!@m min_width-17/24!@l">
+        {{>tabSwitcher tabBtn=true secondary=true tabNoline=false borderStyle='border_dotted-before ' switcher=true switcherID='searchBox' contentMinHeight=false minHeight='min_height-40' tab1name='簡易查詢' tab2name='進階查詢' tab3=false tab3name='PubMed' tab4=false tab4name='站內檢索' moreClass='' card=true noShadow=false content='tabSwitcherContent'}}
+      </div>
+      <!-- /Search -->
+      {{/if}}
+      {{#if equal2cols}}
+      <div class="min_width-1/2!@s">
+        {{!-- <div class="tw-p-3 tw-shadow hover:tw-shadow-xl uk-card uk-card-default"></div> --}}
+        {{>tabSwitcher tabBtn=true secondary=true tabNoline=false borderStyle='border_dotted-before ' switcher=true switcherID='searchBox' contentMinHeight=false minHeight='min_height-40' tab1name='簡易查詢' tab2name='進階查詢' tab3=false tab3name='PubMed' tab4=false tab4name='站內檢索' moreClass='min_height-250@m min_height-270@l ' card=true noShadow=false content='tabSwitcherContent'}}
+      </div>
+      <div class="min_width-1/2!@s" uk-margin>
+        {{!-- <div class="tw-p-3 tw-shadow hover:tw-shadow-xl uk-card uk-card-default"></div> --}}
+        {{!-- <div class="tw-p-3 uk-card uk-card-default">
+          {{>boxTitle h2headingLine=false h2color='' h2fullBG=false h2fullBGshadow=false moreClass='' h2bg=false h2icon=true iconSecondary=false iconBg=false iconBgSecondary=false h2iconName='fas fa-bullhorn' title='最新消息' h2more=true}}
+          {{>boxList boxPadding=false boxShadow=false overflowHidden=true maxHeight='max_height-150@s' minHeight='min_height-100@s' iconSecondary=false icon='fas fa-angle-right'}}
+        </div> --}}
+        <div class="tw-p-6 uk-card uk-card-default">
+          {{>boxTitle h2headingLine=false h2color='' h2fullBG=false h2fullBGshadow=false moreClass='tw--tw-mt-3 ' h2bg=false h2icon=true iconSecondary=false iconBg=false iconBgSecondary=false h2iconName='fas fa-bullhorn' title='最新消息' h2more=true}}
+          {{>tabSwitcher tabBtn=false secondary=false tabNoline=false borderStyle='' switcher=true switcherID='newsList' contentMinHeight=true minHeight='min_height-65' tab1name='全部' tab2name='雙語詞彙' tab3=true tab3name='學術名詞' tab4=false tab4name='站內檢索' moreClass='' card=false noShadow=true content='listText' columnClass=' uk-flex-column' iconPrimary=true iconSecondary=false icon='fas fa-circle fa-xs' time=false}}
+        </div>
+        <div class="tw-p-0 uk-card uk-card-default">
+          <div class="bg_primary min_height-50 min_height-73@m min_height-95@l uk-background-blend-luminosity uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(img/names.png);">
+            {{!-- <img src="img/names.png" alt="名詞專區"> --}}
+            <a class="tw-py-2 tw-text-xl tw-no-underline uk-position-cover" href="/">
+              <div class="tw-h-full uk-flex uk-flex-center uk-flex-middle">名詞專區</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+      {{#if 2and1of3cols}}
+      <div class="min_width-2/3!@s">
+        {{>newsBox title='最新動態' cols=true gridClass=' uk-grid-column-small uk-grid-row-small uk-child-width-expand@m' colsClass='min_width-1/3!@m' textAlign=''}}
+      </div>
+      <div class="min_width-1/3!@s">
+        {{#if h2headingLine}}
+        <h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-star"></i>活動資訊</h2>
+        {{else}}
+        <div class="{{h2color}}{{#if h2fullBG}}bg_primary {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+          <h2 class="{{#if h2bg}}bg_primary tw-px-2 {{/if}}tw-m-0 tw-pb-2 tw-text-xl tw-font-medium">{{#if h2icon}}<i class="color_primary tw-mr-1 {{h2iconName}}"></i>{{/if}}活動資訊</h2>
+          {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+        </div>
+        {{/if}}
+        {{#if iconBox}}
+        {{>iconBox }}
+        {{/if}}
+        {{#if smallSlideshow}}
+        {{>slideshow smallSlide=true slidenavThick=true heightFull=false option='autoplay: true; animation: fade; min-height: 120; max-height: 170' img1Src='https://picsum.photos/800/500' img2Src='https://picsum.photos/802/502' img3Src='https://picsum.photos/804/504' imgCover=false caption=false dotNav=false largeDotnav=false}}
+        {{/if}}
+      </div>
+      {{/if}}
+      {{#if 1col}}
+      <div class="uk-width-1-1">
+        {{> newsBox title='最新消息' h2more=true dropdown=true cols=false card=true maxHeight='' gridClass=' uk-grid uk-grid-column-small uk-grid-row-small uk-child-width-1-2@s' colsClass=' class="min_width-1/2!@s"' heading=false time=false postby=false textAlign='' linkClass='color_primary ' item5=false}}
+        <div class="tw-py-4">
+          {{> listBox title='收錄資料簡介' h2more=false h2Links1='' h2Links2='' h2Links3=false h2Links3name='' h2Links4=false h2Links4name='' links=false switcher=true}}
+        </div>
+      </div>
+      {{/if}}
+    </div>
+    <!-- /Grid -->
+  </div>
+  <!-- /top content -->
+  {{/if}}
+  {{#if 1colFull}}
+  {{!-- {{#if hrefForAA}}
+  <!-- accesskey -->
+  <div class="uk-position-relative uk-visible@m">
+    <a class="tw-no-underline tw-px-1 uk-position-absolute" href="#C" id="AC" name="C" title="中央內容區塊" accesskey="C" style="left:5px; top:20px; z-index:1;">:::</a>
+  </div>
+  <!-- /accesskey -->
+  {{/if}} --}}
+  {{!-- <div class="partners tw-m-auto tw-px-4 l:tw-px-8 uk-width-2-3@xl">
+    {{> sliderBox class='' container=false horizontalTxt=false title='合作夥伴' h2more=false h2Links1='' h2Links2='' h2Links3=false h2Links3name='' h2Links4=false h2Links4name='' sliderCols='uk-child-width-1-2 uk-child-width-1-4@s uk-child-width-1-8@m' imgRatio1=true img1='acm.png' img2='AIPLOGO.jpg' img3='Alexander_Street_Press_logo.png' img4='AMA_logo.svg.png' img5='annual_review.jpg' img6='APA.jpg' item7=true item8=true item9=true img7='artstor.png' img8='asco.png' img9='bentham.png' bookTitle='Title' bookTitle1='acm' bookTitle2='AIPLOGO' bookTitle3='Alexander Street' bookTitle4='AMA' bookTitle5='annual review' bookTitle6='APA' bookTitle7='artstor' bookTitle8='asco' bookTitle9='bentham'}}
+  </div> --}}
+  {{> (lookup . 'content') }}
+  {{/if}}
+  {{#if iconLinks}}
+  <!-- Icon links -->
+  <div class="iconLinks tw-m-auto tw-pt-4 tw-px-4 l:tw-px-8 uk-width-2-3@xl">
+    <!-- grid -->
+    <div class="uk-grid uk-grid-small uk-grid-column-large" uk-grid uk-margin>
+      <div class="uk-width-auto"><a class="uk-flex"><span alt=""><i class="color_primary tw-mr-1 {{iconClass}}"></i></span><span class="text uk-text-break uk-width-auto">防疫專區</span></a></div>
+      <div class="uk-width-auto"><a class="uk-flex"><span alt=""><i class="color_primary tw-mr-1 {{iconClass}}"></i></span><span class="text uk-text-break uk-width-auto">Thieme 主題書展</span></a></div>
+      <div class="uk-width-auto"><a class="uk-flex"><span alt=""><i class="color_primary tw-mr-1 {{iconClass}}"></i></span><span class="text uk-text-break uk-width-auto">Library Watch 電子報</span></a></div>
+      <div class="uk-width-auto"><a class="uk-flex"><span alt=""><i class="color_primary tw-mr-1 {{iconClass}}"></i></span><span class="text uk-text-break uk-width-auto">Ex Libris 電子報</span></a></div>
+    </div>
+    <!-- /grid -->
+  </div>
+  <!-- /Icon links -->
+  {{/if}}
+  {{#if tabLinks}}
+  <!-- Tab links -->
+  <div class="tabLinks tw-m-auto tw-mt-2 tw-px-2 l:tw-px-8 uk-width-2-3@xl">
+    <!-- grid -->
+    <div class="tw-text-center uk-grid uk-grid-small uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-6@l" uk-grid uk-margin>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>Title</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>快速上手</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>加口長大中國加好說</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>加口長大中國加好說</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>加口長大中國加好說</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>加口長大中國加好說</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>加口長大中國加好說</a></div>
+      <div><a class="bg_color3 tw-p-2 tw-pl-6 tw-no-underline tw-block tw-relative"><span class="bg_primary tw-w-4 tw-absolute tw-inset-y-0 tw-left-0"></span>加口長大中國加好說</a></div>
+    </div>
+    <!-- /grid -->
+  </div>
+  <!-- /Tab links -->
+  {{/if}}
+</section>
+<!-- /index main content -->

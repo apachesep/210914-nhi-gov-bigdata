@@ -1,0 +1,219 @@
+{{!-- {{>pagination simple=true pageText=true pageSelect=true pageSum='2'}} --}}
+
+<!-- pagination -->
+<div class="pagination">
+	{{#if simple}}
+	<div class="uk-grid uk-grid-small uk-child-width-auto uk-flex-middle uk-flex-auto uk-flex-center" uk-margin>
+		<div>
+			{{#if pageFirstAndLast}}
+			<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="首頁">
+				<i class="fas fa-angle-double-left fa-fw"></i>
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>首頁</span>
+			</button>
+			<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="首頁" hidden>
+				<i class="fas fa-angle-double-left fa-fw"></i>
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>首頁</span>
+			</a>
+			{{/if}}
+			<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="上一頁">
+				<i class="fas fa-angle-left fa-fw"></i>
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>上一頁</span>
+			</button>
+			<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="上一頁" hidden>
+				<i class="fas fa-angle-left fa-fw"></i>
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>上一頁</span>
+			</a>
+		</div>
+		{{#if pageDropdown}}
+		{{!-- 頁碼下拉式選單，請提供欄位訊息說明，或使用Title屬性文字說明來標示欄位元件，以幫助使用者得知欄位提示訊息 --}}
+		<div>
+			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+				<div class="uk-inline">
+					<button class="uk-button uk-button-default uk-button-small" type="button">-頁碼-<i uk-icon="icon: triangle-down"></i></button>
+					<div class="min_width-50" uk-dropdown title="頁碼選單">
+						<ul class="uk-nav uk-dropdown-nav">
+							<li><a href="">1</a></li>
+							<li><a href="">2</a></li>
+						</ul>
+					</div>
+				</div>
+				<span class="tw-mx-1">&nbsp;/<span class="tw-px-1" title="總頁數">{{pageSum}}</span>頁</span>
+			</div>
+		</div>
+		{{/if}}
+		{{#if pageSelect}}
+		{{!-- 頁碼下拉式選單，請提供欄位訊息說明，或使用Title屬性文字說明來標示欄位元件，以幫助使用者得知欄位提示訊息 --}}
+		<div>
+			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+				<label class="tw-flex tw-items-center">
+					{{#if pageText}}第&nbsp;{{/if}}
+					<select class="tw-w-auto uk-select uk-form-small" title="頁碼選單" onChange="window.location.href=this.value">
+						<option value="/0" selected>1</option>
+						<option value="/1">2</option>
+					</select>
+					{{#if pageText}}&nbsp;頁{{/if}}
+				</label>
+				<span class="tw-mx-1">&nbsp;/<span class="tw-px-1" title="總頁數">{{pageSum}}</span>頁</span>
+			</div>
+		</div>
+		{{/if}}
+		{{#if numberInOnePage}}
+		{{!-- 頁碼下拉式選單，請提供欄位訊息說明，或使用Title屬性文字說明來標示欄位元件，以幫助使用者得知欄位提示訊息 --}}
+		<div>
+			<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+				<label class="tw-flex tw-items-center">
+					<span class="tw-pr-1">每頁筆數</span>
+					<select class="tw-w-auto uk-select uk-form-small" title="筆數選單" onChange="window.location.href=this.value">
+						<option value="/0" selected>10</option>
+						<option value="/1">20</option>
+					</select>
+				</label>
+			</div>
+		</div>
+		{{/if}}
+		{{#if pageNonumber}}
+		<div class="min_width-200"></div>
+		{{/if}}
+		<div>
+			<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="下一頁">
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>下一頁</span>
+				<i class="fas fa-angle-right fa-fw"></i>
+			</a>
+			<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="下一頁" hidden>
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>下一頁</span>
+				<i class="fas fa-chevron-right fa-fw"></i>
+			</button>
+			{{#if pageFirstAndLast}}
+			<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="末頁">
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>末頁</span>
+				<i class="fas fa-angle-double-right fa-fw"></i>
+			</a>
+			<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="末頁" hidden>
+				<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>末頁</span>
+				<i class="fas fa-chevron-double-right fa-fw"></i>
+			</button>
+			{{/if}}
+		</div>
+	</div>
+	{{else}}
+	<div class="uk-grid uk-grid-small uk-child-width-auto uk-flex-middle uk-flex-center uk-flex-between@m" uk-margin>
+		{{#if checkedNumber}}
+		<!-- Checked Number -->
+		<div class="uk-flex uk-flex-middle">
+			<label class="tw-inline-block m:tw-hidden tw-text-sm tw-mr-2"><input class="checkAll tw-mr-1 uk-checkbox" type="checkbox">全選</label>
+			<small class="checkedNumber tw-mr-2">勾選<span class="checkedSum pseudo:parentheses tw-pr-1"></span>筆</small>
+			<button class="uncheckAll bg_grey-200 tw-py-0 tw-text-xs tw-leading-normal uk-button uk-button-primary uk-button-small" type="reset">清空</button>
+		</div>
+		<!-- /Checked Number -->
+		{{/if}}
+		<div class="tw-text-sm{{#if orderForMobile}} uk-flex-last"{{/if}}>
+			<div class="uk-grid uk-grid-small uk-child-width-auto uk-flex-middle uk-flex-auto uk-flex-center">
+				<div>
+					{{#if pageFirstAndLast}}
+					<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="首頁">
+						<i class="fas fa-angle-double-left fa-fw"></i>
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>首頁</span>
+					</button>
+					<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="首頁" hidden>
+						<i class="fas fa-angle-double-left fa-fw"></i>
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>首頁</span>
+					</a>
+					{{/if}}
+					<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="上一頁">
+						<i class="fas fa-angle-left fa-fw"></i>
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>上一頁</span>
+					</button>
+					<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="上一頁" hidden>
+						<i class="fas fa-angle-left fa-fw"></i>
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>上一頁</span>
+					</a>
+				</div>
+				{{#if pageDropdown}}
+				{{!-- 頁碼下拉式選單，請提供欄位訊息說明，或使用Title屬性文字說明來標示欄位元件，以幫助使用者得知欄位提示訊息 --}}
+				<div>
+					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+						<div class="uk-inline">
+							<button class="uk-button uk-button-default uk-button-small" type="button">-頁碼-<i uk-icon="icon: triangle-down"></i></button>
+							<div class="min_width-50" uk-dropdown title="頁碼選單">
+								<ul class="uk-nav uk-dropdown-nav">
+									<li><a href="">1</a></li>
+									<li><a href="">2</a></li>
+								</ul>
+							</div>
+						</div>
+						<span class="tw-mx-1">&nbsp;/<span class="tw-px-1" title="總頁數">{{pageSum}}</span>頁</span>
+					</div>
+				</div>
+				{{/if}}
+				{{#if pageSelect}}
+				{{!-- 頁碼下拉式選單，請提供欄位訊息說明，或使用Title屬性文字說明來標示欄位元件，以幫助使用者得知欄位提示訊息 --}}
+				<div>
+					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+						<label class="tw-flex tw-items-center">
+							{{#if pageText}}第&nbsp;{{/if}}
+							<select class="tw-w-auto uk-select uk-form-small" title="頁碼選單" onChange="window.location.href=this.value">
+								<option value="/0" selected>1</option>
+								<option value="/1">2</option>
+							</select>
+							{{#if pageText}}&nbsp;頁{{/if}}
+						</label>
+						<span class="tw-mx-1">&nbsp;/<span class="tw-px-1" title="總頁數">{{pageSum}}</span>頁</span>
+					</div>
+				</div>
+				{{/if}}
+				{{#if numberInOnePage}}
+				{{!-- 頁碼下拉式選單，請提供欄位訊息說明，或使用Title屬性文字說明來標示欄位元件，以幫助使用者得知欄位提示訊息 --}}
+				<div{{#if orderForMobile}} class="uk-flex-last"{{/if}}>
+					<div class="uk-grid uk-grid-collapse uk-child-width-auto uk-flex-middle uk-margin">
+						<label class="tw-flex tw-items-center">
+							<span class="tw-pr-1">每頁筆數</span>
+							<select class="tw-w-auto uk-select uk-form-small" title="筆數選單" onChange="window.location.href=this.value">
+								<option value="/0" selected>10</option>
+								<option value="/1">20</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				{{/if}}
+				{{#if pageNonumber}}
+				<div class="min_width-200"></div>
+				{{/if}}
+				<div{{#if orderForMobile}} class="uk-flex-last@m"{{/if}}>
+					<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="下一頁">
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>下一頁</span>
+						<i class="fas fa-angle-right fa-fw"></i>
+					</a>
+					<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="下一頁" hidden>
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>下一頁</span>
+						<i class="fas fa-chevron-right fa-fw"></i>
+					</button>
+					{{#if pageFirstAndLast}}
+					<a class="tw-text-gray-500 hover:tw-text-black tw-border-0 uk-button uk-button-default uk-button-small" href="#" title="末頁">
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>末頁</span>
+						<i class="fas fa-angle-double-right fa-fw"></i>
+					</a>
+					<button class="tw-border-0 uk-button uk-button-default uk-button-small" disabled href="#" title="末頁" hidden>
+						<span{{#if pageText}} class="uk-visible@m"{{else}} class="tw-sr-only"{{/if}}>末頁</span>
+						<i class="fas fa-chevron-double-right fa-fw"></i>
+					</button>
+					{{/if}}
+				</div>
+			</div>
+		</div>
+		{{#if sortDropdown}}
+		<!-- Sort Dropdown -->
+		<div{{#if orderForMobile}} class="uk-flex-last@m"{{/if}}>
+			<label>
+				<span class="tw-sr-only">{{selectLabel}}</span>
+				<select class="uk-select uk-form-small" title="{{selectLabel}}" title="{{selectLabel}}" onchange="window.location.href=this.value">
+					<option value="" selected>{{selectOptionl}}</option>
+					<option value="/1">option</option>
+				</select>
+			</label>
+		</div>
+		<!-- /Sort Dropdown -->
+		{{/if}}
+	</div>
+	{{/if}}
+</div>
+<!-- pagination -->

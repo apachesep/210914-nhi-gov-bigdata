@@ -1,0 +1,109 @@
+{{!-- {{>searchBox placeholder='輸入關鍵字搜尋' select=true select1=true select2=true searchButtonExpand=true searchButtonName='搜尋' btn_secondary=false bottomOption=true leftText=true leftTxt='縮小查詢範圍' checkbox=true keywords=true rightHref=true rightTxt='進階查詢'}} --}}
+<!-- searchBox -->
+<form onsubmit="return false;">
+  <div{{#if containerFluid}} class="container-fluid" {{/if}}>
+    {{#if topText}}<small class="tw-mb-1">數位典藏系統可查詢本館數位化特藏資料</small>{{/if}}
+    <div class="row">
+      {{#if select}}
+      <!-- select -->
+      <div class="col-sm-auto">
+        <select class="form-select" title="選項篩選">
+          <option value="0" selected>-不限欄位-</option>
+          <option value="">option</option>
+        </select>
+      </div>
+      <!-- /select -->
+      {{/if}}
+      <!-- input -->
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <label class="w-100">
+              <span class="visually-hidden">關鍵字搜尋</span>
+              <input class="form-control" type="text" placeholder="{{placeholder}}" title="輸入關鍵字搜尋">
+            </label>
+          </div>
+          {{#if 2ndInput}}
+          <div class="col-auto">或</div>
+          <div class="col">
+            <label class="w-100">
+              <span class="visually-hidden">關鍵字搜尋</span>
+              <input class="form-control" type="text" placeholder="{{2ndPlaceholder}}" title="輸入關鍵字搜尋">
+            </label>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+      <!-- /input -->
+      {{#if select1}}
+      <div class="col-sm-auto">
+        <select class="form-select" title="選項篩選">
+          <option value="0" selected>-不限欄位-</option>
+          <option value="">option</option>
+        </select>
+      </div>
+      {{/if}}
+      {{#if select2}}
+      <div class="col-sm-auto">
+        <select class="form-select" title="選項篩選">
+          <option value="0" selected>-不限欄位-</option>
+          <option value="">option</option>
+        </select>
+      </div>
+      {{/if}}
+      {{#if searchButton}}
+      <!-- searchButton -->
+      <div class="col-sm-auto"><a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}min_width-150 w-100 btn btn-primary" href="#"><i class="tw-mr-1 fas fa-search"></i>{{searchButtonName}}</a>
+      </div>
+      <!-- /searchButton -->
+      {{/if}}
+      {{#if 2ndButton}}
+      <div class="col-sm-auto"><a class="{{#if btnSecondary}}btn_secondary {{else}}btn_primary {{/if}}min_width-150 w-100 btn btn-primary" href="#">{{#if 2ndButtonFaicon}}<i class="tw-mr-1 {{2ndButtonFaiconClasses}}"></i>{{/if}}{{2ndButtonName}}</a>
+      </div>
+      {{/if}}
+      {{#if bottomOption}}
+      <!-- option -->
+      <div class="col-12">
+        <div class="row row-cols-auto">
+          {{#if leftHref}}
+          <div class="col"><a class="color_primary" href="#">{{leftTxt}}</a></div>
+          {{/if}}
+          {{#if leftText}}
+          <div class="col">{{leftTxt}}</div>
+          {{/if}}
+          {{#if rightHref}}
+          <div class="col ms-auto"><a class="color_primary" href="#">{{rightTxt}}</a></div>
+          {{/if}}
+        </div>
+        {{#if checkbox}}
+        <div class="row row-cols-auto">
+          <div class="col">資料類型：</div>
+          <div class="col">
+            <label class="me-4"><input class="me-1 form-check-input" type="checkbox">數位檔</label>
+            <label class="me-4"><input class="me-1 form-check-input" type="checkbox">報紙</label>
+          </div>
+        </div>
+        <div class="row row-cols-1">
+          <div class="col">數位檔：</div>
+          <div class="col">
+            <label class="me-4"><input class="me-1 form-check-input" type="checkbox">只搜尋有數位檔案的資料</label>
+          </div>
+        </div>
+        {{/if}}
+        {{#if keywords}}
+        <div class="row row-cols-1">
+          <div class="col">熱門關鍵詞：</div>
+          <div class="col">
+            <span class="pseudo:comma_ch"><a class="tw-underline" href="#">每議人已識影</a></span>
+          </div>
+        </div>
+        {{/if}}
+      </div>
+      <!-- /option -->
+      {{/if}}
+    </div>
+    <!-- /row -->
+  </div>
+  <!-- /container -->
+</form>
+<!-- searchBox -->

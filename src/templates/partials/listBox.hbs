@@ -1,0 +1,64 @@
+{{#if h2headingLine}}
+<h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-bullhorn"></i>{{title}}</h2>
+{{else}}
+<!-- categray title -->
+<div class="{{h2color}}{{#if h2fullBG}}bg_primary {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}m:justify-between uk-flex uk-flex-wrap uk-flex-middle">
+  <h2 class="{{#if h2bg}}bg_primary tw-px-2 {{/if}}s:tw-flex-1 tw-m-0 tw-py-2 tw-text-xl tw-font-medium">{{#if h2icon}}<i class="{{#if iconSecondary}}color_secondary {{else}}color_primary {{/if}}{{#if iconBg}}{{#if iconBgSecondary}}bg_secondary {{else}}bg_primary {{/if}}tw-p-1 tw-mr-2 {{/if}}tw-mr-1 {{h2iconName}}"></i>{{/if}}{{title}}</h2>
+  {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+  {{#if h2tabLinks}}
+  <span>
+    <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks1}}</a>
+    <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks2}}</a>
+    {{#if h2tabLinks3}}
+    <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks3name}}</a>
+    {{/if}}
+    {{#if h2tabLinks4}}
+    <a class="btn_primary tw-leading-none tw-px-1 s:tw-px-3 tw-py-2 uk-button uk-button-primary" href="#">{{h2tabLinks4name}}</a>
+    {{/if}}
+  </span>
+  {{/if}}
+  {{#if h2links}}
+  <span>
+    <small class="pseudo:line_v">
+      <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links1}}</a>
+    </small>
+    <small class="pseudo:line_v">
+      <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links2}}</a>
+    </small>
+    {{#if h2Links3}}
+    <small class="pseudo:line_v">
+      <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links3name}}</a>
+    </small>
+    {{/if}}
+    {{#if h2Links4}}
+    <small class="pseudo:line_v">
+      <a{{#if h2LinksPrimary}} class="color_primary" {{/if}} href="#">{{h2Links4name}}</a>
+    </small>
+    {{/if}}
+  </span>
+  {{/if}}
+</div>
+<!-- /categray title -->
+{{#if links}}
+<!-- links -->
+<div class="tw-mb-2 tw-px-2 s:tw-p-0 s:tw-justify-end tw-flex-wrap uk-flex uk-flex-middle">
+  <span class="pseudo:line_v">
+    <a{{#if linksPrimary}} class="color_primary" {{/if}} href="#">{{links1}}</a>
+  </span>
+  <span class="pseudo:line_v">
+    <a{{#if linksPrimary}} class="color_primary" {{/if}} href="#">{{links2}}</a>
+  </span>
+  <span class="pseudo:line_v">
+    <a{{#if linksPrimary}} class="color_primary" {{/if}} href="#">{{links3}}</a>
+  </span>
+</div>
+<!-- /links -->
+{{/if}}
+{{/if}}
+<!-- categray content -->
+{{#if switcher}}
+{{>tabSwitcher tabBtn=false secondary=false tabNoline=false borderStyle='' switcher=true switcherID='dataList' contentMinHeight=true minHeight='min_height-65' tab1name='學術名詞' tab2name='辭書' tab3=true tab3name='雙語詞彙' tab4=false tab4name='站內檢索' moreClass='' card=false noShadow=true content='listText' class=' tw-text-sm' columnClass=' uk-grid-divider uk-grid-column-medium uk-grid-row-collapse uk-child-width-1-2 uk-child-width-1-4@m' itemClass=true iconPrimary=true iconSecondary=false icon='fas fa-circle fa-xs' time=false contentBlank=true}}
+{{else}}
+{{> listText class=' tw-text-sm' card=false columnClass=' uk-grid-divider uk-grid-column-medium uk-grid-row-collapse uk-child-width-1-2 uk-child-width-1-4@m' itemClass=true minWidth='' iconPrimary=true iconSecondary=false icon='fas fa-circle fa-xs' time=false}}
+{{/if}}
+<!-- /categray content -->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html class="text-m" lang="zh-Hant">
+	<head>
+		{{>meta}}
+	</head>
+
+	<body id="top" class="page{{#if focusForAA}} focus{{/if}} tw-relative">
+		<span class="tw-hidden">Some images has been designed using resources from <a href="https://unsplash.com/">Unsplash</a> &amp; <a href="https://pixabay.com/">Pixabay</a> &amp; <a href="https://www.freepik.com/">Freepik</a></span>
+		{{>header shadow=false topNav=false stickyBgColor='' navAbsolute=false logoNavClass='' logoBgClass=' s:tw-py-1 m:tw-py-2' logoBackground=true logoBackgroundClass='tw-bg-white tw-opacity-50' indexHref='Aindex.html' logoSrc='data-src="img/logoA.svg"' logoText=false logotext='' logoTextEng=false logotexteng='' logoRightNav=true navIcon=true navVLine=false textSize=false textSizeClass='' iconSearch=false dropdownSearch=false offcanvas=false offcanvasBtnColor=' color_primary' mainMenu=false mainMenuClass='' mainMenuBg=true secondary=false title3=true title4=false title5=false title6=false title7=false menuTitle1='Tab1' menuTitle2='Tab2' menuTitle3='Tab3' menuTitle4='名詞建議' menuTitle5='審議會' menuTitle6='會員專區' menuTitle7='關於我們' banner=false}}
+		{{!-- {{>header logoRightNav=true mainMenu=true menuTitle1='' menuTitle2='' menuTitle3='' menuTitle4='' menuTitle5='' menuTitle6='' menuTitle6IsLink=true menuTitle6link=''}} --}}
+
+		{{>mainContent name=false content='04-content' inrtext=false inrText='外部檢測'}}
+
+		{{>footer mask=false footerWide=false sitemap=false border=false gradientLine=false gridDivider=false topLink=false topLinkIcon=false topLinkIconClass='fas fa-caret-right' border=true borderWhite=false simpleFooter=true textCenter=true topInfo=false links=false navVLine=true online=false iconOnline='fas fa-eye' today=false iconToday='fas fa-user' sum=true iconSum='fas fa-users' infoBG=true secondaryBG=false vertical=false colorPrimary=false colorSecondary=false sitemap=false privacy=false rightCols=false}}
+
+		{{#if jqueryBody}}
+
+		<!-- jq:js -->
+		<script src="js/jquery.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+		{{#if bootstrapBody}}
+		<!-- bs:js -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<!-- endinject -->
+		{{/if}}
+	</body>
+</html>

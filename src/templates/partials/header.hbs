@@ -1,0 +1,259 @@
+{{!-- {{>header shadow=true topNav=true textSize=true logoRightNav=true mainMenu=true 01active=true tw-borderHR=true iconLogin=true modal=true}} --}}
+<!-- header -->
+<header{{#if shadow}} class="tw-shadow"{{/if}}>
+	{{#if topNav}}
+	<nav class="bg_primary tw-py-1 tw-text-center tw-relative uk-visible@m" uk-margin>
+		<div class="tw-px-4 tw-py-1 uk-container">
+			<div class="sub_nav margin_x_child tw-text-sm tw-h-full uk-flex uk-flex-center uk-flex-middle" uk-margin>
+				{{#if hrefForAA}}
+				<span class="uk-visible@m"><a class="tw-no-underline tw-inline-block tw-px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
+				{{/if}}
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="index.html">回首頁</a></span>
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">網站導覽</a></span>
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">線上客服</a></span>
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">加入我們</a></span>
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">English</a></span>
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">Facebook</a></span>
+				<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">Youtube</a></span>
+				{{#if textSize}}
+				<span class="text_size text_size-s hover_bg"><button class="tw-text-white tw-px-2 uk-button" type="button" title="縮小字級">A-</button></span>
+				<span class="text_size text_size-m hover_bg active"><button class="tw-text-white tw-px-2 uk-button" type="button" title="適中字級">A</button></span>
+				<span class="text_size text_size-l hover_bg"><button class="tw-text-white tw-px-2 uk-button" type="button" title="加大字級">A+</button></span>
+				{{/if}}
+			</div>
+		</div>
+	</nav>
+	{{/if}}
+	<div class="uk-sticky" uk-sticky="media: (max-width: 959px); cls-active: tw-shadow-md{{stickyBgColor}}">
+		<nav class="tw-w-full{{logoNavClass}} tw-z-10{{#if navAbsolute}} tw-absolute{{/if}}">
+			<!-- logo & sideLinks -->
+			<div class="logoBG{{logoBgClass}} tw-relative">
+				{{#if logoBackground}}
+				<!-- color background -->
+				<div class="{{logoBackgroundClass}} uk-position-cover"></div>
+				<!-- color background -->
+				{{/if}}
+				<!-- container -->
+				<div class="tw-text-white tw-relative uk-container">
+					{{!-- <div class="bg-white tw-opacity-85 uk-position-cover"></div> --}}
+					<div class="uk-flex-middle uk-grid uk-grid-small uk-grid-match uk-child-width-expand" uk-grid>
+						<!-- logo -->
+						<div class="logo">
+							<h1 class="tw-m-0 tw-text-base">
+								<a class="logoimg tw-no-underline uk-flex uk-flex-middle" href="{{indexHref}}" title="{{title}}">
+									<span class="tw-sr-only">{{title}}</span>
+									<img class="uk-preserve" {{{logoSrc}}} data-width data-height alt="{{title}}" uk-img uk-svg>
+									{{#if logoText}}
+									<div class="logoText tw-text-base s:tw-text-2xl m:tw-text-4xl tw-pl-2 tw-font-semibold uk-flex uk-flex-center uk-flex-column">
+										<span class="tw-leading-none tw-tracking-widest">{{logotext}}</span>
+										{{#if logoTextEng}}<span class="tw-text-xs uk-visible@s">{{logotexteng}}</span>{{/if}}
+									</div>
+									{{/if}}
+								</a>
+							</h1>
+						</div>
+						<!-- /logo -->
+						{{#if logoRightNav}}
+						<!-- sideLinks -->
+						<div class="tw-m-0 tw-relative uk-width-auto">
+							<div class="sub_nav uk-flex uk-flex-middle">
+								{{#if hrefForAA}}
+								<span class="uk-visible@m"><a class="tw-no-underline tw-inline-block tw-px-2" href="#U" id="AU" name="U" title="上方功能區塊" accesskey="U" style="padding-bottom: 3px;">:::</a></span>
+								{{/if}}
+								{{#if navIcon}}
+								<span><a class="tw-px-2" href="index.html" title="回首頁"><i class="fas fa-home"></i><span class="tw-sr-only">回首頁</span></a></span>
+								<span><a class="tw-px-2" href="" title="登出"><i class="fas fa-sign-out-alt"></i><span class="tw-sr-only">登出</span></a></span>
+								{{else}}
+								<div>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="index.html">回首頁</a></span>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">網站導覽</a></span>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">線上客服</a></span>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">加入我們</a></span>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">English</a></span>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">Facebook</a></span>
+									<span{{#if navVLine}} class="pseudo:line_v"{{/if}}><a{{#if navVLine}}{{else}} class="tw-px-2"{{/if}} href="#">Youtube</a></span>
+								</div>
+								{{/if}}
+								{{!-- <span class="tw-text-white">|</span> --}}
+								{{#if textSize}}
+								<span class="text_size text_size-s hover_bg"><button class="{{textSizeClass}}tw-py-0 tw-border-none uk-button uk-button-default uk-button-small" type="button" title="縮小字級">A-</button></span>
+								<span class="text_size text_size-m hover_bg active"><button class="{{textSizeClass}}tw-py-0 tw-border-none uk-button uk-button-default uk-button-small" type="button" title="適中字級">A</button></span>
+								<span class="text_size text_size-l hover_bg"><button class="{{textSizeClass}}tw-py-0 tw-border-none uk-button uk-button-default uk-button-small" type="button" title="加大字級">A+</button></span>
+								{{/if}}
+								{{#if iconSearch}}
+								<span><a class="tw-px-2" href="" title="搜尋"><i class="fas fa-search"></i><span class="tw-sr-only">搜尋</span></a></span>
+								{{/if}}
+								{{#if dropdownSearch}}
+								<div class="uk-inline">
+									<button class="tw-border-none uk-button uk-button-default uk-button-small" type="button" title="搜尋"><i class="fas fa-search"></i><span class="tw-sr-only">搜尋</span></button>
+									<div uk-dropdown>
+										{{>searchBox searchBoxTitle=false small=false searchBoxTitleLeft='' searchBoxTitleRight='' select=false selectLabel='類型選項' selectOptionl='題名' inputClass='uk-width-1-1' placeholder='請輸入檢索詞' 2ndInput=false 2ndPlaceholder='' selectRight1=false selectRight1Label= '' selectRight1Optionl='' selectRight2=false selectRight2Label= '' selectRight2Optionl='' selectRight3=false selectRight3Label= '' selectRight3Optionl='' multipleSelectRight1=false multipleSelectRight2=false searchButtonExpand=true searchButtonName='搜尋' btnSecondary=false bottomOption=true optionText=false leftHref=false leftHrefName='' leftText=false leftTxtName='' rightHref=false rightHrefName='進階查詢' checkbox=false checkboxTitle='資料類型：' cb1Type1='學術名詞' cb1Type2='辭書' cb1Type3='雙語詞彙-公告詞彙' checkboxType4=true cb1Type4='雙語詞彙-機關建議詞彙' checkboxType5=false cb1Type5='' checkboxType6=false cb1Type6='' checkboxType7=false cb1Type7='' checkbox2=false checkbox2Title='資料類型：' cb2Type1='學術名詞' cb2Type2='辭書' cb2Type3='雙語詞彙-公告詞彙' checkbox2Type4=true cb2Type4='雙語詞彙-機關建議詞彙' checkbox2Type5=false cb2Type5='' checkbox2Type6=false cb2Type6='' checkbox2Type7=false cb2Type7='' keywords=true keywordsTitle='熱門關鍵字：'}}
+									</div>
+								</div>
+								{{/if}}
+								{{#if iconLogin}}
+								<span><button class="color_primary tw-border-none l:tw-pr-0 uk-button uk-button-default" type="button" title="註冊/登入/登出"{{#if iconLoginOnclick}} onclick="javascript:location.href='http://www.wibibi.com'"{{/if}}><i class="-tw-mb-1 fas fa-user-circle fa-lg"></i><span class="tw-sr-only">註冊/登入/登出選單</span></button></span>
+								{{#if iconLoginDropdown}}
+								<div class="min_width-50 uk-dropdown" uk-dropdown>
+									<ul class="uk-nav uk-dropdown-nav">
+										<li><a class="hover:tw-underline tw-py-2" href="#password" uk-toggle>修改密碼</a></li>
+										<li><a class="hover:tw-underline tw-py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:tw-underline tw-py-2" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:tw-underline tw-py-2" href="index.html">登出</a></li>
+									</ul>
+								</div>
+								{{/if}}
+								{{/if}}
+							</div>
+						</div>
+						<!-- /sideLinks -->
+						{{/if}}
+						{{#if offcanvas}}
+						<!-- top nav buttons on mobile -->
+						<div class="uk-flex-nowrap uk-width-auto uk-hidden@m">
+							{{#if iconLogin}}
+							<div class="uk-inline">
+								<button class="color_primary tw-border-none tw-h-full uk-button uk-button-default" type="button" title="註冊/登入/登出"><i class="-tw-mb-1 fas fa-user-circle fa-lg"></i><span class="tw-sr-only">註冊/登入/登出選單</span></button>
+								<div class="min_width-50 uk-dropdown" uk-dropdown="pos: bottom-right">
+									<ul class="uk-nav uk-dropdown-nav">
+										<li><a class="hover:tw-underline tw-py-2" href="#password" uk-toggle>修改密碼</a></li>
+										<li><a class="hover:tw-underline tw-py-2" href="#register" uk-toggle>註冊</a></li>
+										<li><a class="hover:tw-underline tw-py-2" href="#login" uk-toggle>登入</a></li>
+										<li><a class="hover:tw-underline tw-py-2" href="index.html">登出</a></li>
+									</ul>
+								</div>
+							</div>
+							{{/if}}
+							<button class="min_width-50! min_height-50!{{offcanvasBtnColor}} tw-px-0 uk-flex uk-flex-right uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas"><span class="tw-sr-only">選單</span></button>
+						</div>
+						<!-- /top nav buttons on mobile -->
+						{{/if}}
+					</div>
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /logo & sideLinks -->
+			{{#if mainMenu}}
+			<!-- main menu -->
+			<div class="mainMenu{{mainMenuClass}} tw-relative uk-visible@m">
+				{{#if mainMenuBg}}
+				<!-- color background -->
+				{{#if secondary}}
+				<div class="bg_secondary tw-opacity-60 uk-position-cover"></div>
+				{{else}}
+				<div class="bg_primary tw-opacity-60 uk-position-cover"></div>
+				{{/if}}
+				<!-- /color background -->
+				{{/if}}
+				<!-- container -->
+				<div class="container_responsive@s tw-px-2 m:tw-mt-2 tw-text-white tw-relative uk-container uk-visible@m">
+					<div class="uk-flex uk-navbar" uk-navbar>
+						<div class="uk-navbar-center">
+							<ul class="nav_bar tw-m-0 uk-tab">
+								{{!-- <li hidden></li> --}}
+								<li{{#if 01active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle1IsLink}}{{menuTitle1link}}{{else}}#{{/if}}">{{menuTitle1}}</a>
+								</li>
+								<li{{#if 02active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle2IsLink}}{{menuTitle2link}}{{else}}#{{/if}}">{{menuTitle2}}</a>
+									<div class="bg_white tw-opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 1">
+										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+											<li class="tw-mt-0 uk-nav-header">
+												<a class="hover:tw-underline tw-text-base tw-block" href="#">Item</a>
+											</li>
+											<li class="tw-mt-0 uk-nav-header">
+												<a class="hover:tw-underline tw-text-base tw-block" href="#">Item</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								{{#if title3}}
+								<li{{#if 03active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle3IsLink}}{{menuTitle3link}}{{else}}#{{/if}}">{{menuTitle3}}</a>
+									<div class="bg_white tw-opacity-90 uk-overflow-auto uk-dropdown" uk-dropdown="offset: 1">
+										<ul class="nav_header-dotted uk-nav uk-dropdown-nav">
+											<li class="tw-mt-0 uk-nav-header">
+												<a class="hover:tw-underline tw-text-base tw-block" href="#">Item</a>
+												<ul class="hidden_ie uk-nav uk-nav-sub">
+													<li><a class="hover:tw-underline tw-text-base tw-block" href="#">SubItem</a></li>
+													<li><a class="hover:tw-underline tw-text-base tw-block" href="#">SubItem</a></li>
+												</ul>
+											</li>
+											<li class="tw-mt-0 uk-nav-header">
+												<a class="hover:tw-underline tw-text-base tw-block" href="#">Item</a>
+												<ul class="hidden_ie uk-nav uk-nav-sub">
+													<li><a class="hover:tw-underline tw-text-base tw-block" href="#">SubItem</a></li>
+													<li><a class="hover:tw-underline tw-text-base tw-block" href="#">SubItem</a></li>
+												</ul>
+											</li>
+											<li class="tw-mt-0 uk-nav-header">
+												<a class="hover:tw-underline tw-text-base tw-block" href="#">Item</a>
+											</li>
+											<li class="tw-mt-0 uk-nav-header">
+												<a class="hover:tw-underline tw-text-base tw-block" href="#">Item</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								{{/if}}
+								{{#if title4}}
+								<li{{#if 04active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle4IsLink}}{{menuTitle4link}}{{else}}#{{/if}}">{{menuTitle4}}</a>
+								</li>
+								{{/if}}
+								{{#if title5}}
+								<li{{#if 05active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle5IsLink}}{{menuTitle5link}}{{else}}#{{/if}}">{{menuTitle5}}</a>
+								</li>
+								{{/if}}
+								{{#if title6}}
+								<li{{#if 06active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle6IsLink}}{{menuTitle6link}}{{else}}#{{/if}}" target="_blank">{{menuTitle6}}</a>
+								</li>
+								{{/if}}
+								{{#if title7}}
+								<li{{#if 07active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle7IsLink}}{{menuTitle7link}}{{else}}#{{/if}}" target="_blank">{{menuTitle7}}</a>
+								</li>
+								{{/if}}
+								{{#if title8}}
+								<li{{#if 08active}} class="uk-active"{{/if}}>
+									<a class="color_white! tw-text-xl tw-font-medium" href="{{#if menuTitle8IsLink}}{{menuTitle8link}}{{else}}#{{/if}}" target="_blank">{{menuTitle8}}</a>
+								</li>
+								{{/if}}
+							</ul>
+						</div>
+					</div>
+					{{#if gradientLine}}
+					<div class="tw-bg-gradient-to-r from-transparent via-black to-transparent" style="height: 2px;"></div>
+					{{/if}}
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /main menu -->
+			{{/if}}
+		</nav>
+		{{#if tw-borderHR}}
+		<hr class="tw-border-black tw-border-tw-opacity-25 tw-m-0">
+		{{/if}}
+	</div>
+	{{#if banner}}
+	<div class="min_height-200 uk-flex uk-flex-center uk-flex-middle uk-background-cover" data-src="img/photo.jpg" uk-img>
+		<h2 class="tw-text-xl tw-font-medium tw-text-black tw-bg-gradient-to-r tw-from-transparent tw-via-white tw-to-transparent">系統登入服務<span class="eng tw-text-xs">System Login Service</span></h2>
+	</div>
+	{{/if}}
+	{{#if offcanvas}}
+	{{>offcanvas titleIsLink=true navMenuJS=false subAccordion=false navIcon=true search=true}}
+	{{/if}}
+</header>
+{{#if iconLogin}}
+{{>modal-login id='login' modal-title='會員登入' errorOn=true error='驗證提示語' note=true noteText='登入說明' register=true}}
+{{>modal-register id='register' modal-title='會員註冊' errorOn=true error='驗證提示語'}}
+{{>modal-password id='password' modal-title='修改密碼' errorOn=true error='驗證提示語' note=true noteText='密碼規則說明' resetButton=true resetButtonName='重　　填'}}
+
+{{/if}}
+{{#if modal}}
+{{>modal-confirm id='confirm' modal-title='確定？'}}
+
+{{/if}}
+<!-- /header -->

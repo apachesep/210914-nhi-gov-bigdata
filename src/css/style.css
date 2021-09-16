@@ -1,0 +1,124 @@
+body {
+  background-color: #E2E8F0;
+}
+
+.logoBG {
+  padding: 5px 0;
+  background: white;
+}
+
+.logoimg > img, .logoimg > img ~ svg {
+  max-height: 50px;
+  width: calc(1340px/100*50);
+  min-height: 40px;
+}
+@media (min-width: 480px) {
+  .logoimg > img, .logoimg > img ~ svg {
+    min-width: 400px;
+    width: auto;
+  }
+}
+.logoimg > img[data-src*="img/logo"], .logoimg > img[data-src="img/logo"] ~ svg {
+  width: calc(660px/100*50);
+}
+.logoimg .logoText {
+  border-left: 2px solid black;
+}
+
+/*---------- IE10+ ------------------------------*/
+.uk-heading-line > ::after,
+.uk-heading-line > ::before {
+  top: calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted #2d7b9f;
+}
+
+.icon {
+  width: 65px;
+  margin: 2px 0;
+}
+
+header,
+header nav,
+.searchBoxBanner {
+  position: relative;
+}
+
+body::before,
+header::before,
+header::after,
+.searchBoxBanner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#footer,
+footer {
+  background: none;
+}
+
+footer {
+  background-color: #CBD5E1;
+}
+footer * {
+  color: #4e4e4e !important;
+  font-size: 0.8rem;
+}
+footer .sum * {
+  color: white !important;
+}
+
+#offcanvas * {
+  color: white !important;
+}
+#offcanvas .btn_primary,
+#offcanvas .btn_primary > * {
+  color: #2d7b9f !important;
+}
+
+.prescription.page footer {
+  padding-bottom: 70px;
+}
+.prescription .bg_secondary.uk-flex {
+  border-radius: 20px 20px 0 0;
+}
+.prescription a.bg_secondary, .prescription a.tw-border, .prescription .uk-button {
+  border-radius: 10px;
+}
+
+.heading_line > ::before,
+.heading_line > ::after,
+.uk-heading-line > ::before,
+.uk-heading-line > ::after {
+  top: calc(50% - (2px/ 2));
+  border-bottom: calc(2px) dotted #2d7b9f;
+}
+
+.irs--flat .irs-bar,
+.irs--flat .irs-single,
+.irs--flat .irs-handle > i:first-child,
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  background: #2d7b9f;
+}
+
+.irs--flat .irs-from:before,
+.irs--flat .irs-to:before,
+.irs--flat .irs-single:before {
+  border-top-color: #2d7b9f;
+}
+
+/*---------- Only landscape in mobile ------------------------------*/
+/*---------- IE10+ ------------------------------*/
+/* ----------- iPhone ----------- */
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */
+}
+@supports not (-webkit-touch-callout: none) {
+  /* CSS for other than iOS devices */
+}

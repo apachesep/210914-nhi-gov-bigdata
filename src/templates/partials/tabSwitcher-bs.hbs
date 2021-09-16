@@ -1,0 +1,47 @@
+{{!-- {{>tabSwitcher secondary=true tabNoline=true tab3=true tab4=true tab1name='Tab1' tab2name='Tab2' tab3name='Tab3' tab4name='Tab4' moreClass='' card=true content='' content2='blank' content3='blank' content4='blank'}} --}}
+<!-- Tab Switcher -->
+<div class="tabSwitcher">
+  <ul class="{{#if customTab}}tab_btn tab_btn-active-white tab_btn-space-s! nav{{else}}nav nav-tabs{{/if}}">
+    <li>
+      <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabpanel1" href>{{tab1name}}</a>
+    </li>
+    <li>
+      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabpanel2" href>{{tab2name}}</a>
+    </li>
+    {{#if tab3}}
+    <li>
+      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabpanel3" href>{{tab3name}}</a>
+    </li>
+    {{/if}}
+    {{#if tab4}}
+    <li>
+      <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tabpanel4" href>{{tab4name}}</a>
+    </li>
+    {{/if}}
+  </ul>
+  {{#if switcher}}
+  <!-- Tab Content -->
+  <div class="tab-content{{#if card}} card border-top-0 shadow-sm{{/if}}">
+    <div class="tab-pane fade show active{{#if card}} card-body{{/if}}" id="tabpanel1" role="tabpanel">
+      {{> (lookup . 'content') }}
+    </div>
+    <div class="tab-pane fade{{#if card}} card-body{{/if}}" id="tabpanel2" role="tabpanel">
+      {{> (lookup . 'content2') }}
+    </div>
+    {{#if tab3}}
+    <div class="tab-pane fade{{#if card}} card-body{{/if}}" id="tabpanel3" role="tabpanel">
+      {{> (lookup . 'content3') }}
+    </div>
+    {{/if}}
+    {{#if tab4}}
+    <div class="tab-pane fade{{#if card}} card-body{{/if}}" id="tabpanel4" role="tabpanel">
+      {{> (lookup . 'content4') }}
+    </div>
+    {{/if}}
+  </div>
+  <!-- /Tab Content -->
+  {{else}}
+  {{> (lookup . 'content') }}
+  {{/if}}
+</div>
+<!-- Tab Switcher -->

@@ -1,0 +1,129 @@
+{{!-- {{>carousel colsCarousel=false id='carousel' caption=false indicators=true noautoplay=false}} --}}
+{{#if colsCarousel}}
+<!-- columns carousel -->
+<div id="{{id}}" class="carousel slide" data-bs-ride="carousel"{{#if noautoplay}} data-bs-interval="false"{{/if}}>
+  {{#if indicators}}
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#{{id}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#{{id}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  {{/if}}
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container-fluid">
+        <div class="row row-cols-5 gx-4 gy-4">
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=1" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=2" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=3" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=4" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=5" class="d-block w-100" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container-fluid">
+        <div class="row row-cols-5 gx-4 gy-4">
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=6" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=7" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=8" class="d-block w-100" alt="">
+            </a>
+          </div>
+          <div class="col">
+            <a class="block" href="">
+              <img src="https://fakeimg.pl/300x400/?text=9" class="d-block w-100" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href data-bs-target="#{{id}}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="tw-sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href data-bs-target="#{{id}}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="tw-sr-only">Next</span>
+  </a>
+</div>
+<!-- /columns carousel -->
+{{else}}
+<!-- carousel -->
+<div id="{{id}}" class="carousel slide" data-bs-ride="carousel"{{#if noautoplay}} data-bs-interval="false"{{/if}}>
+  {{#if indicators}}
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#{{id}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#{{id}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#{{id}}" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  {{/if}}
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://picsum.photos/1920/640" class="d-block w-100" alt="圖片">
+      {{#if caption}}
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="h5">Caption1</h2>
+        <p>Text1</p>
+      </div>
+      {{/if}}
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/1923/641" class="d-block w-100" alt="圖片">
+      {{#if caption}}
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="h5">Caption2</h2>
+        <p>Text2</p>
+      </div>
+      {{/if}}
+    </div>
+    <div class="carousel-item">
+      <img src="https://picsum.photos/1926/642" class="d-block w-100" alt="圖片">
+      {{#if caption}}
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="h5">Caption3</h2>
+        <p>Text3</p>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{id}}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#{{id}}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- /carousel -->
+{{/if}}

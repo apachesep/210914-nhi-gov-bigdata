@@ -1,0 +1,71 @@
+<!-- uk-card -->
+<div class="tw-p-4 tw-shadow hover:tw-shadow-xl uk-card uk-card-default">
+  <canvas id="chart"></canvas>
+</div>
+<!-- /uk-card -->
+<script>
+  const labels = [
+    '9/27',
+    '9/20',
+    '9/13',
+    '9/6',
+  ];
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'INR檢測',
+      backgroundColor: '#c04660',
+      borderColor: '#c04660',
+      data: [4.5, 2.1, 4, 3],
+    }]
+  };
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+  var myChart = new Chart(
+    document.getElementById('chart'),
+    config
+  );
+</script>
+<!-- uk-card -->
+<div class="tw-p-4 tw-shadow hover:tw-shadow-xl uk-card uk-card-default">
+  <!-- uk-overflow-auto -->
+  <div class="uk-overflow-auto">
+    <p class="tw-m-0">INR檢測歷史</p>
+    <table class="min_width-1000@m uk-table uk-table-small uk-table-striped">
+      <thead>
+        <tr>
+          <th class="uk-table-shrink uk-text-nowrap">日期</th>
+          <th class="uk-table-shrink uk-text-nowrap">時間</th>
+          <th class="uk-table-shrink uk-text-nowrap">數值</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">日期</span>{{/if}}9/27/2021</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">時間</span>{{/if}}19:00</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">數值</span>{{/if}}<span class="color3">4.5</span></td>
+        </tr>
+        <tr>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">日期</span>{{/if}}9/20/2021</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">時間</span>{{/if}}18:08</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">數值</span>{{/if}}2.1</td>
+        </tr>
+        <tr>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">日期</span>{{/if}}9/13/2021</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">時間</span>{{/if}}17:45</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">數值</span>{{/if}}4</td>
+        </tr>
+        <tr>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">日期</span>{{/if}}9/06/2021</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">時間</span>{{/if}}18:05</td>
+          <td>{{#if responsive}}<span class="tw-bg-gray-500 tw-text-white tw-text-sm tw-px-2 tw-mr-1 uk-hidden@m">數值</span>{{/if}}3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- /uk-overflow-auto -->
+</div>
+<!-- /uk-card -->

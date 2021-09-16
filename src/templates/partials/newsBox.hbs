@@ -1,0 +1,82 @@
+{{#if h2headingLine}}
+<h2 class="color_primary uk-heading-line tw-text-base tw-text-center"><i class="tw-mr-2 fas fa-bullhorn"></i>{{title}}</h2>
+{{else}}
+<!-- categray title -->
+<div class="{{h2color}}{{#if h2fullBG}}bg_primary tw-px-2 tw-py-px {{/if}}{{#if h2fullBGshadow}}tw-shadow {{/if}}uk-flex uk-flex-between uk-flex-middle uk-flex-right">
+  <h2 class="{{#if h2bg}}bg_primary {{/if}}tw-px-2 tw-m-0 tw-text-base tw-font-medium">{{#if h2icon}}<i class="{{#if iconSecondary}}color_secondary {{else}}color_primary {{/if}}{{#if iconBg}}{{#if iconBgSecondary}}bg_secondary {{else}}bg_primary {{/if}}tw-p-1 tw-mr-2 {{/if}}tw-mr-1 {{h2iconName}}"></i>{{/if}}{{title}}</h2>
+  {{#if h2more}}<span><a class="tw-text-sm" href="#">更多</a><i class="tw-ml-1 fas fa-angle-right"></i></span>{{/if}}
+</div>
+<!-- /categray title -->
+
+{{/if}}
+<!-- categray content -->
+{{#if cols}}
+<div class="tw-p-3{{#if card}} tw-shadow hover:tw-shadow-xl uk-card uk-card-default{{/if}}">
+  <div class="uk-grid{{gridClass}}" uk-grid>
+    <div class="{{colsClass}}">
+      {{#if heading}}
+      <h2 class="tw-text-lg tw-m-0 uk-text-break{{textAlign}}">Tile</h2>
+      {{/if}}
+      {{#if time}}
+      <time class="tw-font-semibold">2021-01-07</time>
+      {{/if}}
+      <p class="uk-text-break{{textAlign}}">每面反後能親的於，心聲近灣我！高知熱小：細巴電務。父頭示天已花水續什如趣</p>
+      {{#if postby}}
+      <small class="tw-font-semibold">新竹臺大分院</small>
+      {{/if}}
+    </div>
+    <div class="{{colsClass}}">
+      {{#if heading}}
+      <h2 class="tw-text-lg tw-m-0 uk-text-break{{textAlign}}">Tile</h2>
+      {{/if}}
+      {{#if time}}
+      <time class="tw-font-semibold">2021-01-07</time>
+      {{/if}}
+      <p class="uk-text-break{{textAlign}}">每面反後能親的於，心聲近灣我！高知熱小：細巴電務。父頭示天已花水續什如趣</p>
+      {{#if postby}}
+      <small class="tw-font-semibold">新竹臺大分院</small>
+      {{/if}}
+    </div>
+    <div class="{{colsClass}}">
+      {{#if heading}}
+      <h2 class="tw-text-lg tw-m-0 uk-text-break{{textAlign}}">Tile</h2>
+      {{/if}}
+      {{#if time}}
+      <time class="tw-font-semibold">2021-01-07</time>
+      {{/if}}
+      <p class="uk-text-break{{textAlign}}">每面反後能親的於，心聲近灣我！高知熱小：細巴電務。父頭示天已花水續什如趣</p>
+      {{#if postby}}
+      <small class="tw-font-semibold">新竹臺大分院</small>
+      {{/if}}
+    </div>
+  </div>
+</div>
+{{else}}
+<div class="tw-p-3{{#if card}} tw-shadow hover:tw-shadow-xl uk-card uk-card-default{{/if}}">
+  {{#if dropdown}}
+  <!-- dropdown -->
+  <div class="dropdown min_width-100{{class}} uk-inline">
+    <button class="tw-pr-1 uk-button uk-button-small uk-button-default uk-flex uk-flex-middle uk-flex-between" type="button">全部<span class="tw-pl-4" uk-icon="icon: triangle-down"></span></button>
+    {{>dropdown class=' tw-border-b tw-border-solid' boundary='.dropdown' level1=true level2=false level3=false header=false optionSum=false divider=false}}
+  </div>
+  <!-- /dropdown -->
+  {{/if}}
+  <div class="min_height-100@s">
+    <ul class="tw-mt-0 tw-text-justify{{gridClass}}" uk-grid>
+      <li{{{colsClass}}}>
+        <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+          <div class="uk-width-expand"><a class="{{linkClass}}tw-inline uk-text-break" href="#">檢測INR值</a></div>
+          <div class="min_width-100 uk-width-auto"><time class="tw-mr-2">2020/09/16</time><i class="color_primary fas fa-angle-right fa-fw"></i></div>
+        </div>
+      </li>
+      <li{{{colsClass}}}>
+        <div class="uk-grid uk-grid-collapse uk-child-width-expand" uk-grid>
+          <div class="uk-width-expand"><a class="{{linkClass}}tw-inline uk-text-break" href="#">填寫問卷</a></div>
+          <div class="min_width-100 uk-width-auto"><time class="tw-mr-2">2020-09-15</time><i class="color_primary fas fa-angle-right fa-fw"></i></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+{{/if}}
+<!-- /categray content -->
