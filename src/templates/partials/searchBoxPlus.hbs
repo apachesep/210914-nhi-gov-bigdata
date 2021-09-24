@@ -19,22 +19,26 @@
 								<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
 									{{#if selectFirst}}
 									<!-- select -->
-									<div class="firstSelect min_width-150 uk-width-1-2 uk-width-auto@s">
-										<label class="tw-sr-only" for="sl1">選項</label>
-										<select id="sl1" class="uk-select">
-											<option value="0" selected>{{selectOptionName}}</option>
-											<option value="">option</option>
-										</select>
+									<div class="firstSelect min_width-1/2">
+										<label aria-label="select">
+											<span class="tw-sr-only">選項</span>
+											<select class="uk-select">
+												<option value="0" selected>{{selectOptionName}}</option>
+												<option value="">option</option>
+											</select>
+										</label>
 									</div>
 									<!-- /select -->
 									{{#if 2ndSelect}}
 									<!-- select -->
-									<div class="secondSelect min_width-150 uk-width-1-2 uk-width-auto@s">
-										<label class="tw-sr-only" for="sl2">選項</label>
-										<select id="sl2" class="uk-select">
-											<option value="0" selected>{{2ndSelectOptionName}}</option>
-											<option value="">option</option>
-										</select>
+									<div class="secondSelect min_width-1/2">
+										<label aria-label="select">
+											<span class="tw-sr-only">選項</span>
+											<select class="uk-select">
+												<option value="0" selected>{{2ndSelectOptionName}}</option>
+												<option value="">option</option>
+											</select>
+										</label>
 									</div>
 									<!-- /select -->
 									{{/if}}
@@ -43,14 +47,18 @@
 										<!-- flex -->
 										<div class="uk-flex uk-flex-middle">
 											<div class="tw-flex-auto">
-												<label class="tw-sr-only" for="ip1">輸入</label>
-												<input id="ip1" class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+												</label>
 											</div>
 											{{#if 2ndInput}}
 											<div class="tw-px-2">或</div>
 											<div class="tw-flex-auto">
-												<label class="tw-sr-only" for="ip2">輸入</label>
-												<input id="ip2" class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input id="ip2" class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+												</label>
 											</div>
 											{{/if}}
 										</div>
@@ -63,14 +71,18 @@
 										<!-- flex -->
 										<div class="uk-flex uk-flex-middle">
 											<div class="tw-flex-auto">
-												<label class="tw-sr-only" for="ip1">輸入</label>
-												<input id="ip1" class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+												</label>
 											</div>
 											{{#if 2ndInput}}
 											<div class="tw-px-2">或</div>
 											<div class="tw-flex-auto">
-												<label class="tw-sr-only" for="ip2">輸入</label>
-												<input id="ip2" class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+												</label>
 											</div>
 											{{/if}}
 										</div>
@@ -78,22 +90,26 @@
 									</div>
 									<!-- /input -->
 									<!-- select -->
-									<div class="firstSelect min_width-150 uk-width-1-2 uk-width-auto@s">
-										<label class="tw-sr-only" for="sl1">選項</label>
-										<select id="sl1" class="uk-select">
-											<option value="0" selected>{{selectOptionName}}</option>
-											<option value="">option</option>
-										</select>
+									<div class="firstSelect min_width-1/2">
+										<label aria-label="select">
+											<span class="tw-sr-only">選項</span>
+											<select class="uk-select">
+												<option value="0" selected>{{selectOptionName}}</option>
+												<option value="">option</option>
+											</select>
+										</label>
 									</div>
 									<!-- /select -->
 									{{#if 2ndSelect}}
 									<!-- select -->
-									<div class="secondSelect min_width-150 uk-width-1-2 uk-width-auto@s">
-										<label class="tw-sr-only" for="sl2">選項</label>
-										<select id="sl2" class="uk-select">
-											<option value="0" selected>{{2ndSelectOptionName}}</option>
-											<option value="">option</option>
-										</select>
+									<div class="secondSelect min_width-1/2">
+										<label aria-label="select">
+											<span class="tw-sr-only">選項</span>
+											<select class="uk-select">
+												<option value="0" selected>{{2ndSelectOptionName}}</option>
+												<option value="">option</option>
+											</select>
+										</label>
 									</div>
 									<!-- /select -->
 									{{/if}}
@@ -103,7 +119,7 @@
 							</div>
 							<!-- /inputBox -->
 							<!-- button remove -->
-							<div class="btnRemove tw-hidden uk-width-auto"><a href="javascript:void(0);" class="min_width-60 tw-static tw-h-full uk-flex uk-flex-middle uk-flex-center" title="刪除" uk-close><span class="tw-sr-only">刪除</span></a></div>
+							<div class="btnRemove tw-hidden uk-width-auto@s"><button class="min_width-60 tw-border-0 tw-w-full uk-icon uk-button uk-button-default uk-close" title="刪除" uk-close><span class="tw-sr-only">刪除</span></button></div>
 							<!-- /button remove -->
 						</div>
 						<!-- /grid -->
@@ -115,50 +131,76 @@
 				<div class="2ndSearchBox min_width-9/10 uk-width-expand@s">
 					<div class="tw-p-3 uk-alert" uk-alert>
 						<div class="uk-flex-stretch uk-grid uk-grid-small uk-child-width-expand" uk-grid>
-							<div class="inputBox uk-width-expand">
+							<div class="inputBox uk-width-expand@s">
 								<div class="uk-grid uk-grid-small uk-child-width-expand" uk-grid>
 									{{#if selectFirst}}
-									<div class="firstSelect min_width-150 uk-width-1-2 uk-width-auto@s@s">
-										<select class="uk-select">
-											<option value="0" selected>{{selectOptionName}}</option>
-											<option value="">option</option>
-										</select>
+									<div class="firstSelect min_width-1/2@s">
+										<label aria-label="select">
+											<span class="tw-sr-only">選項</span>
+											<select class="uk-select">
+												<option value="0" selected>{{selectOptionName}}</option>
+												<option value="">option</option>
+											</select>
+										</label>
 									</div>
 									<div class="input min_width-1/2 uk-width-expand@s">
 										<div class="uk-flex uk-flex-middle">
-											<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}"></div>
+											<div class="tw-flex-auto">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+												</label>
+											</div>
 											{{#if 2ndInput}}
 											<div class="tw-px-2">或</div>
-											<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}"></div>
+											<div class="tw-flex-auto">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+												</label>
+											</div>
 											{{/if}}
 										</div>
 									</div>
 									{{else}}
 									<div class="input min_width-1/2 uk-width-expand@s">
 										<div class="uk-flex uk-flex-middle">
-											<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}"></div>
+											<div class="tw-flex-auto">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{placeholder}}" title="{{placeholder}}">
+												</label>
+											</div>
 											{{#if 2ndInput}}
 											<div class="tw-px-2">或</div>
-											<div class="tw-flex-auto"><input class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}"></div>
+											<div class="tw-flex-auto">
+												<label aria-label="input">
+													<span class="tw-sr-only">輸入</span>
+													<input class="uk-input" type="text" placeholder="{{2ndPlaceholder}}" title="{{2ndPlaceholder}}">
+												</label>
+											</div>
 											{{/if}}
 										</div>
 									</div>
-									<div class="firstSelect min_width-150 uk-width-1-2 uk-width-auto@s@s">
-										<select class="uk-select">
-											<option value="0" selected>{{selectOptionName}}</option>
-											<option value="">option</option>
-										</select>
+									<div class="firstSelect min_width-1/2@s">
+										<label aria-label="select">
+											<span class="tw-sr-only">選項</span>
+											<select class="uk-select">
+												<option value="0" selected>{{selectOptionName}}</option>
+												<option value="">option</option>
+											</select>
+										</label>
 									</div>
 									{{/if}}
 								</div>
 							</div>
-							<div class="btnRemove tw-hidden uk-width-auto"><a class="min_width-60 tw-static tw-h-full uk-flex uk-flex-middle uk-flex-center" uk-close></a></div>
+							<div class="btnRemove tw-hidden uk-width-auto@s"><button class="min_width-60 tw-border-0 tw-w-full uk-icon uk-button uk-button-default uk-close" title="刪除" uk-close><span class="tw-sr-only">刪除</span></button></div>
 						</div>
 					</div>
 				</div>
 				{{/if}}
 				<!-- button add -->
-				<div class="btnAdd min_width-75 uk-width-auto@s">
+				<div class="btnAdd min_width-75 uk-flex-last uk-width-auto@s">
 					<div class="uk-flex uk-flex-middle">
 						<button id="btnAdd" class="min_height-67@s m:tw-pl-0 m:tw-pr-2 tw-bg-transparent tw-w-full uk-button uk-button-primary"><i class="color_primary fas fa-plus fa-lg" title="新增選項"></i><span class="tw-sr-only">新增選項</span></button>
 					</div>
@@ -203,8 +245,8 @@
 				<!-- /grid item -->
 				<!-- grid item -->
 				<div class="{{#if stack}}tw-mx-auto{{stackClass}}{{else}}min_width-1/3!@s{{/if}} uk-grid-margin" uk-marin>
-					<label class="tw-text-base tw-font-medium tw-mb-1 tw-block uk-form-label" for="sc">英文字母首字</label>
-					<select id="sc" class="uk-select">
+					<label class="tw-text-base tw-font-medium tw-mb-1 tw-block uk-form-label" for="en">英文字母首字</label>
+					<select id="en" class="uk-select">
 						<option value="">All</option>
 					</select>
 				</div>

@@ -9,17 +9,7 @@ body {
 
 .logoimg > img, .logoimg > img ~ svg {
   max-height: 50px;
-  width: calc(1340px/100*50);
   min-height: 40px;
-}
-@media (min-width: 480px) {
-  .logoimg > img, .logoimg > img ~ svg {
-    min-width: 400px;
-    width: auto;
-  }
-}
-.logoimg > img[data-src*="img/logo"], .logoimg > img[data-src="img/logo"] ~ svg {
-  width: calc(660px/100*50);
 }
 .logoimg .logoText {
   border-left: 2px solid black;

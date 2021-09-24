@@ -1400,7 +1400,7 @@ const getSrc = (el) => {
   return srcs
   // console.log(srcs)
 }
-const allSrcs = getSrc('siblingEl') // Same with the last variable 'siblingEl' in changeImage() as below
+// const allSrcs = getSrc('siblingEl') Same with the last variable 'siblingEl' in changeImage() as below
 // const allSrcs = getSrc('.bg-light .icon img')
 // Set <img onclick="changeImage(this, 'img/icon01.png', 'img/icon01b.png', '.bg-light .icon img'); return false;">
 const changeImage = (thisElement, imgOldUrl, imgNewUrl, siblingEl) => {
@@ -1415,7 +1415,6 @@ const changeImage = (thisElement, imgOldUrl, imgNewUrl, siblingEl) => {
     thisElement.setAttribute('src', imgOldUrl)
   }
 }
-
 // ----- </ Click img to cahnge src with being single > ----- //
 
 //------------- Uikit ------------------------------------------------//
@@ -1430,41 +1429,26 @@ const uikitSvg = (logoSvg) => {
 }
 uikitSvg(".logoimg>[uk-svg]")
 
-const uikitImg = (logoImg, src) => {
-  UIkit.img(logoImg, {dataSrc: src})
-  console.log('Image')
+const ukChangeImg = (logoImg, src) => {
+  // var str = src
+  // var ext = str.slice(str.indexOf('.') + 1) // Extract string between '.' and the end
+  UIkit.img($$(logoImg), {dataSrc: src}) // $$(logoImg) is element. CANNOT use selector:'logoImg'
+  if ($$(logoImg).hasAttribute('uk-svg')) {
+    // console.log('Image')
+    UIkit.svg($$(logoImg), {src: src})
+  }
   // if (onePresent(logoImg)) {
   //   var img = UIkit.img(logoImg, {dataSrc: src});
   // }
 }
-uikitImg('..prescription .logoimg > img', '/img/logoB.svg')
+// ukChangeImg('.prescription .logoimg > img', '/img/logoB.svg')
 
 // window.onload = () => {
 // }
 
 //Slideshow tab focus
-// Set <a href="https://www.google.com.tw/" onfocus="slideShowFocus('#slideshow', '#slideshow .uk-dotnav a', event)" onkeydown="enterOpenUrl('_blank', event)">Banner1</a> on <ul class="uk-dotnav">
-// function slideShowFocus(slideshow, tabsArray, event) {
-//   var slideshow = document.querySelector(slideshow)
-//   var tabs = document.querySelectorAll(tabsArray)
-//   for (var i = 0;i < tabs.length;i++) {
-//     // tabs[i] = UIkit.slideshow(slideshow).show(i)
-//     if (event.currentTarget == tabs[i]) {
-//       UIkit.slideshow(slideshow).show(i)
-//     }
-//   }
-// }
-
-//Click 'Enter' to open window by the attribute 'href'
-//Or using "event.currentTarget" relpace the "thisKeyDown"
-// function enterOpenUrl(targetWindow, event) {
-//   if (event.keyCode === 13) {
-//     window.open(event.currentTarget.getAttribute('href'), targetWindow)
-//   }
-// }
-
-const slideShowFocus = (slideshow, tabsArray, event) => {
-  $$all(tabsArray).forEach((item, index) => {
+const slideShowFocus = (slideshow, tabs, event) => {
+  $$all(tabs).forEach((item, index) => {
     item.onfocus = () => {
       if (event.currentTarget == item) {
         UIkit.slideshow($$(slideshow)).show(index)
@@ -1472,21 +1456,29 @@ const slideShowFocus = (slideshow, tabsArray, event) => {
     }
   })
 }
-const enterOpenUrl = (target, targetWindow, event) => {
+slideShowFocus('#slideshow', '#slideshow .uk-dotnav a')
+
+//Click 'Enter' to open window by the attribute 'href'
+// Set <a href="https://www.google.com.tw/" onkeydown="enterOpenUrl('_blank')">
+function enterOpenUrl(targetWindow, event) {
+  if (event.keyCode === 13) {
+    window.open(event.currentTarget.getAttribute('href'), targetWindow)
+  }
+}
+const enterToUrl = (target, targetWindowArr, event) => {
   $$all(target).forEach((item, index) => {
     item.onkeydown = () => {
       if (event.currentTarget == item && event.keyCode === 13) {
-        if (targetWindow.length == 1) {
-          window.open(item.getAttribute('href'), targetWindow[0])
+        if (targetWindowArr.length == 1) {
+          window.open(item.getAttribute('href'), targetWindowArr[0])
         } else {
-          window.open(item.getAttribute('href'), targetWindow[index])
+          window.open(item.getAttribute('href'), targetWindowArr[index])
         }
       }
     }
   })
 }
-slideShowFocus('#slideshow', '#slideshow .uk-dotnav a')
-enterOpenUrl('#slideshow .uk-dotnav a', ['_blank'])
+// enterToUrl('#slideshow .uk-dotnav a', ['_blank'])
 
 //Uikit 3 load active tab (or with switcher) from url [[for another page]]. Usage: page.html?class=el:switcher#3
 //https://www.w3schools.com/JSREF/prop_loc_hash.asp
@@ -1495,8 +1487,8 @@ const urlToTab = () => {
   var hash = location.hash
   var selector = str.slice(str.indexOf('?') + 1, str.indexOf('=')) // Extract string between '?' and '='
   var el = str.slice(str.indexOf('=') + 1, str.indexOf(':')) // Extract string between '=' and ':'
-  var type = str.slice(str.indexOf(':') + 1) // Extract string from next ':' to the end
-  var index = hash.slice(1) // Extract string from next '#' to the end
+  var type = str.slice(str.indexOf(':') + 1) // Extract string between ':' and the end
+  var index = hash.slice(1) // Extract string between '#' and the end
   if (location.search) {
     if (selector == 'class') {
       if (type == 'switcher') {
