@@ -71,68 +71,60 @@
 		    <div class="inr">
 		      <!-- categray title -->
 		      <div class="bg_primary tw-px-2 tw-py-1 uk-flex uk-flex-between uk-flex-middle uk-flex-right">
-		        <h2 class="tw-px-1 tw-m-0 tw-text-base tw-font-medium">INR 檢測</h2>
+		        <h2 class="tw-px-1 tw-m-0 tw-text-base tw-font-medium">請填寫問卷</h2>
+		        <span class="uk-flex uk-flex-middle"><a class="tw-text-white tw-text-sm" href="A03questionnaire-history.html">問卷填寫歷史</a><span uk-icon="icon: chevron-right"></span></span>
 		      </div>
 		      <!-- /categray title -->
 		      
 		      <!-- categray content -->
 		      <div class="tw-p-3 tw-shadow hover:tw-shadow-xl uk-card uk-card-default">
 		        <div class="min_height-70@s">
-		          <div class="uk-text-center uk-grid uk-grid-column-large uk-grid-row-small uk-flex-column" uk-grid>
-		            <p class="number color_primary tw-m-0 tw-text-3xl tw-font-black">1.1</p>
-		            <time>2021/9/6 19:05</time>
-		          </div>
+		          <time class="tw-border-b tw-border-gray-200 tw-mb-4 uk-flex uk-flex-middle">2021/9/13 20:00</time>
+		          <form onsubmit="return false;">
+		            <ol class="tw-space-y-2">
+		              <li>
+		                <label class="tw-font-medium tw-inline-block tw-w-full" for="f-input">你昨天服用了多少劑warfarin？</label>
+		                <div class="tw-space-x-1 uk-flex-middle uk-grid uk-grid-collapse uk-child-width-auto">
+		                  <div><input id="f-input" class="tw-mr-1 uk-input uk-form-width-small" type="text" placeholder=""></div>
+		                  <div>mg</div>
+		                </div>
+		              </li>
+		              <li>
+		                <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有更改任何藥物？</span>
+		                <div class="uk-grid uk-grid-small uk-child-width-auto">
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r3" checked>是</label>
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r3">否</label>
+		                </div>
+		              </li>
+		              <li>
+		                <span class="tw-font-medium tw-inline-block tw-w-full">是否有出血症狀？</span>
+		                <div class="uk-grid uk-grid-small uk-child-width-auto">
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r4" checked>是</label>
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r4">否</label>
+		                </div>
+		              </li>
+		              <li>
+		                <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中有忘記服藥嗎？</span>
+		                <div class="uk-grid uk-grid-small uk-child-width-auto">
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r5" checked>是</label>
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r5">否</label>
+		                </div>
+		              </li>
+		              <li>
+		                <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有吃綠色蔬菜？</span>
+		                <div class="uk-grid uk-grid-small uk-child-width-auto">
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r6" checked>是</label>
+		                  <label><input class="tw-mr-2 uk-radio" type="radio" name="r6">否</label>
+		                </div>
+		              </li>
+		            </ol>
+		          </form>
+		          <a class="btn_primary tw-w-full tw-mt-2 uk-button uk-button-primary" href="" type="submit">完成送出</a>
 		        </div>
 		      </div>
 		      <!-- /categray content -->
 		    </div>
 		    <!-- /inr -->
-		    <form class="tw-p-3 tw-shadow hover:tw-shadow-xl uk-card uk-card-default">
-		      <ol class="tw-space-y-2">
-		        <li>
-		          <span class="tw-font-medium tw-inline-block tw-w-full">請問量測的INR數據是否正確？</span>
-		          <div class="uk-grid uk-grid-small uk-child-width-auto">
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r1" checked>是</label>
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r1">否</label>
-		          </div>
-		        </li>
-		        <li>
-		          <label class="tw-font-medium tw-inline-block tw-w-full" for="f-input">你昨天服用了多少劑warfarin？</label>
-		          <div class="tw-space-x-1 uk-flex-middle uk-grid uk-grid-collapse uk-child-width-auto">
-		            <div><input id="f-input" class="tw-mr-1 uk-input uk-form-width-small" type="text" placeholder=""></div>
-		            <div>mg</div>
-		          </div>
-		        </li>
-		        <li>
-		          <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有更改任何藥物？</span>
-		          <div class="uk-grid uk-grid-small uk-child-width-auto">
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r3" checked>是</label>
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r3">否</label>
-		          </div>
-		        </li>
-		        <li>
-		          <span class="tw-font-medium tw-inline-block tw-w-full">是否有出血症狀？</span>
-		          <div class="uk-grid uk-grid-small uk-child-width-auto">
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r4" checked>是</label>
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r4">否</label>
-		          </div>
-		        </li>
-		        <li>
-		          <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中有忘記服藥嗎？</span>
-		          <div class="uk-grid uk-grid-small uk-child-width-auto">
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r5" checked>是</label>
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r5">否</label>
-		          </div>
-		        </li>
-		        <li>
-		          <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有吃綠色蔬菜？</span>
-		          <div class="uk-grid uk-grid-small uk-child-width-auto">
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r6" checked>是</label>
-		            <label><input class="tw-mr-2 uk-radio" type="radio" name="r6">否</label>
-		          </div>
-		        </li>
-		      </ol>
-		    </form>
 		  </div>
 		  <!-- /container -->
 		</section>

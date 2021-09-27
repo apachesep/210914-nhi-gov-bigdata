@@ -1,0 +1,48 @@
+<time class="tw-border-b tw-border-gray-200 tw-mb-4 uk-flex uk-flex-middle">2021/9/13 20:00</time>
+<form onsubmit="return false;">
+  <ol class="tw-space-y-2">
+    {{!-- <li>
+      <span class="tw-font-medium tw-inline-block tw-w-full">請問量測的INR數據是否正確？</span>
+      <div class="uk-grid uk-grid-small uk-child-width-auto">
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r1" checked>是</label>
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r1">否</label>
+      </div>
+    </li> --}}
+    <li>
+      <label class="tw-font-medium tw-inline-block tw-w-full" for="f-input">你昨天服用了多少劑warfarin？</label>
+      <div class="tw-space-x-1 uk-flex-middle uk-grid uk-grid-collapse uk-child-width-auto">
+        <div><input id="f-input" class="tw-mr-1 uk-input uk-form-width-small" type="text" placeholder=""></div>
+        <div>mg</div>
+      </div>
+    </li>
+    <li>
+      <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有更改任何藥物？</span>
+      <div class="uk-grid uk-grid-small uk-child-width-auto">
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r3" checked>是</label>
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r3">否</label>
+      </div>
+    </li>
+    <li>
+      <span class="tw-font-medium tw-inline-block tw-w-full">是否有出血症狀？</span>
+      <div class="uk-grid uk-grid-small uk-child-width-auto">
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r4" checked>是</label>
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r4">否</label>
+      </div>
+    </li>
+    <li>
+      <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中有忘記服藥嗎？</span>
+      <div class="uk-grid uk-grid-small uk-child-width-auto">
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r5" checked>是</label>
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r5">否</label>
+      </div>
+    </li>
+    <li>
+      <span class="tw-font-medium tw-inline-block tw-w-full">過去七天中是否有吃綠色蔬菜？</span>
+      <div class="uk-grid uk-grid-small uk-child-width-auto">
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r6" checked>是</label>
+        <label><input class="tw-mr-2 uk-radio" type="radio" name="r6">否</label>
+      </div>
+    </li>
+  </ol>
+</form>
+<a class="btn_primary tw-w-full tw-mt-2 uk-button uk-button-primary" href="" type="submit">完成送出</a>
