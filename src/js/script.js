@@ -1080,7 +1080,7 @@ const setAttrs = (el, attrs) => {
   )
 }
 // setAttrs(".logo svg", { "preserveAspectRatio": "xMinYMid" })
-setAttrs("a", { "role": "link" }) // For AA
+setAttrs("a:not([role='submit'])", { "role": "link" }) // For AA
 // setAttrs(".text_size>button", { "role": "button" }) // For AA
 setAttrs('[target="_blank"]', { "title": "另開新視窗" }) // For AA
 
